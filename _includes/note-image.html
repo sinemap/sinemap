@@ -1,0 +1,20 @@
+<figure class="note-img">
+{%- assign note_image = page.image -%}
+<div class="ratio-container">   
+    {%- assign g = note_image | split: '.' -%}
+    <img alt="{{ page.caption }}" data-sizes="auto" class="lazyload" 
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            data-lowsrc="/{{ g[0] }}-lq.{{ g[1] }}"
+            data-srcset="/{{ g[0] }}-320.{{ g[1] }} 320w,
+                         /{{ g[0] }}-640.{{ g[1] }} 640w,
+                         /{{ g[0] }}-960.{{ g[1] }} 960w,
+                         /{{ g[0] }}-1280.{{ g[1] }} 1280w,
+                         /{{ g[0] }}.{{ g[1] }} 1600w" />
+        <noscript>
+        <img class="post-img-fallback" alt="{{ page.caption }}" src="https://karateke.github.io/{{ g[0] }}-640.{{ g[1] }}">
+        </noscript>
+</div>
+{%- if page.caption -%}
+<figcaption class="note-caption">{{ page.caption }}</figcaption>
+{%- endif -%}
+</figure>

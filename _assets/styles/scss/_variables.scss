@@ -1,0 +1,117 @@
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
+
+/* Colors
+   ========================================================================== */
+
+/* My colors */
+
+$link: #dd3435;
+$accent: #C7E0E0;
+
+// additional colors
+
+$blue: #ABD1C6;
+$cream: #ECEAE5;
+
+$white: rgb(255, 254, 253);
+
+// greys
+
+$grey1a: rgb(249, 248, 247);
+$grey1b:rgb(239, 238, 237);
+$grey1: rgb(229, 228, 227); 
+$grey2: rgb(209, 208, 207);
+$grey3: rgb(189, 188, 187);
+$grey4: rgb(169, 168, 167);
+$grey5: rgb(149, 148, 147);
+$grey5a: rgb(119, 118, 117);
+$grey6: rgb(99, 98, 97);
+$grey6a: rgb(89, 88, 87);
+$grey7: rgb(79, 78, 77);
+
+// blacks
+
+$text: rgb(59, 58, 57);
+$black: rgb(39, 38, 37);
+$extrablack: rgb(29, 28, 27);
+
+// kitaplik
+
+$kitap-color: #533F63;
+$film-color: #016775;
+
+/* Typography
+   ========================================================================== */
+
+$sans: "sans", Arial, Helvetica, sans-serif;
+$serif: "text", "Times New Roman", Times, serif;
+
+/* Type Scale square root of 1.4 - x-height of Freight Text = 1.183
+   ========================================================================== */
+
+$fs1:1.959em;
+$fs2:1.656em;
+$fs3:1.4em;
+$fs4:1.183em;
+
+$fsp:1em;
+
+$fs5:0.845em;
+$fs6:0.777em;
+
+$fs7: 0.714em;
+$fs8: 0.656em;
+$fs9: 0.603em;
+
+$lh: 1.58em;
+
+/* Fluid Type
+   ========================================================================== */
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+    }
+  }
+}
+
+$min_width: 320px;
+$max_width: 1420px;
+$min_font: 18px;
+$max_font: 23px;
+
+@mixin heading-margin {
+  margin: 1em 0 1rem 0;
+}
+
+/* Show Grid
+   ========================================================================== */
+
+   @mixin show-grid {
+    background-image: linear-gradient(to bottom, rgba(0, 170, 255, .3) 1px, transparent 1px);
+    background-position: left 0.95em;
+    background-repeat: repeat;
+    background-size: 100% 0.785em;
+   }
+
+   /* Dotted line 
+   ========================================================================== */
+
+   @mixin dotted-line {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='a' patternUnits='userSpaceOnUse' width='4' height='1'%3E%3Cpath stroke='%23000' stroke-width='2' d='M0 0v5'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3C/svg%3E");
+   }

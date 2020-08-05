@@ -1,0 +1,26 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128618889-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-128618889-1');
+</script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<!-- Headroom.js --> 
+<script>
+// grab an element
+var myElement = document.querySelector("header");
+// construct an instance of Headroom, passing the element
+var headroom  = new Headroom(myElement, {
+  "offset": 205,
+  "tolerance": {
+    up: 10,
+    down: 10
+  },
+});
+// initialise
+headroom.init(); 
+</script>

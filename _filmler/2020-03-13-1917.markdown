@@ -1,0 +1,29 @@
+---
+title: '1917'
+artist: Sam Mendes
+image: assets/img/featured/1917-sahne-chapman-mackey.jpeg
+poster: assets/img/kitaplik/1917-film-2019.jpeg
+caption: Dean-Charles Chapman ve George MacKay - 1917
+sameAs: https://www.imdb.com/title/tt8579674/
+year: 2019
+duration: 119
+imdb: 8.4
+genre: Dram, Tarih
+stars: ★★☆☆☆
+type: film
+tags: [filmler-dram, filmler-tarih, filmler-2000ler]
+description: Sam Mendes'in yönettiği 1917 filminin eleştirisi.
+---
+
+Sam Mendes'in yönetmenliğini yaptığı 1917, Birinci Dünya Savaşı sırasında iki İngiliz askerinin düşman hattına yolculuğunu konu alıyor. Fransa'nın kuzeyindeki bir cephede, Almanlar stratejik bir geri çekilme planlamışlardır. Bunun bir tuzak olduğunu bilmeyen bir tabur asker, hücum ettiklerinde düşmanın tuzağına düşecektir. Er Blake ve Schofield, düşman hattına doğru ilerleyip, saldırıyı geri çekme emrini tabur komutanına iletmekle görevlendirilir. 1600 askerin hayatı, onların bu görevi zamanında yerine getirmesine bağlıdır. 
+
+1917'in kayda değer yanı baştan sona tek çekim olarak kurgulanmış olması. Film boyunca kamera iki askeri sürekli takip ediyor. Her şey bu iki askerin perspektifinden gerçekleşiyor. Böylece, sanki oradaki üçüncü bir askermişçesine, seyircinin savaş atmosferini soluması hedeflenmiş. 
+
+Dikkat çekici bir diğer unsur, 1917'nin parçalanan bedenler, kopan uzuvlar gibi savaşın korku uyandıran görsel motiflerin bir ölçüde uzak durması. Filmin yaratmaya çalıştığı dramatik etki, Almanların terk ettiği mevzilerdeki öldürülmüş ineklerin, boşaltılmış siperlerin ve tahrip edilmiş ağır silahların olduğu sahnelerde daha fazla açığa çıkıyor. 
+
+Bu tür görsel ve teknik tercihlerden başka filmde önem arz eden bir şey yok. Her savaş filmine yapıştırılabilecek "insan iradesinin zaferi", "savaşın yıkıcılığı" ya da "atalarımızın fedakarlığı" gibi şablonlardan başka ortada bir tema da yok. İki askerin geçmişine dair yarım yamalak söylenmiş birkaç söz, seyircinin onların hikayesini umursamasına ve hedeflerini sahiplenmesine yetmiyor. Seyirci karakterlerin hikayesine ve mücadelesine inanıp ortak olmadığında, filmin arkasındaki tüm teknik donanım iz bırakan bir yapım ortaya çıkaramıyor. Alfonso Cuaron'un Children of Men filmindeki tek çekim savaş sahneleriyle 1917 kıyaslandığında, hikayeyle film tekniğinin nasıl birbirini beslemesi gerektiği açıkça görülebilir. 
+
+1917, sinemanın gamification haline getirilmesi, seyircinin oyuncu koltuğuna oturtulması gibi hissettirdi. Bir tür Call of Duty oyunu gibi, ama CoD'de bile hikaye daha sağlam. Karakterler bakımından, İngiliz askeri en soylu duyguların insanı, Alman askeri götün önde gideni olarak resmedilmiş ki, bunun ne tarihsel bir tutarlılığı var ne de propagandif olmayan kültürel dünyada bir alıcısı var. 
+
+Alabildiğine yüzeysel bir film. 
+

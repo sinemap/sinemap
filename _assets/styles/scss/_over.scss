@@ -1,0 +1,834 @@
+/************ Basic *************/
+body {
+    color: $text;
+    font-family: $serif;
+    background-color: $white;
+    -webkit-font-smoothing: antialiased;
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+    font-variant-numeric: oldstyle-nums;
+    text-size-adjust: 100%;
+    height: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex; /* Keeps the footer at the bottom */
+    flex-direction: column;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  }
+  
+  p {
+      margin: 0 0 1.58em 0;
+      line-height: 1.58;
+  }
+  
+  /************ Sans *************/
+  
+input, nav, span a, a.link-box, time, .page-time, .tag-cloud, h2, h3:not(.section-header), h4, h5, h6, .post-title, figcaption, .summary, .note-summary, .page-description, .pub-data {
+    font-family: $sans;
+    font-variant-numeric: lining-nums;
+}
+
+  span {
+      font-variant-numeric: lining-nums;
+  }
+  
+  /************ Titles ************/
+  
+  h1, h2, h3, h4, h5, h6 {
+      font-weight: 400;
+      line-height: 1.125;
+      color: $black;
+      text-rendering: optimizeLegibility;
+      font-variant-numeric: lining-nums;
+      margin: 1em 0;
+  }
+  
+  h1 {
+      font-size: 1.8em;
+      overflow-wrap: break-word;
+  }
+  
+  .post-title {
+      margin: 0;
+      padding: 0.8rem 0 0.75rem;
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: 700;
+  }
+  
+  .page-description p{
+    line-height: 1.4;
+    margin: 0 0 0.5rem;
+    color: $grey6a;
+    font-variant-numeric: lining-nums;
+    font-size: 0.95em;
+  }
+  
+  h2 {
+      font-size: $fs2;
+  }
+  
+  h3 {
+      font-size: $fs3;
+  }
+  
+  h4 {
+      font-size: $fs4;
+  }
+  
+  h5 {
+      font-size: $fs5;
+  }
+  
+  h6 {
+      font-size: $fs6;
+  }
+  
+  /************ Links ************/
+  
+  a, a:visited, a:active {
+      color: $text;
+      text-decoration: none;
+  }
+  
+  a.link-box {
+    font-size: 13px;
+    font-weight: 700;
+    color: $grey6;
+    background: $grey1a;
+    border: 1px solid $grey1;
+    padding: 5px 9px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  
+  /************ Images *************/
+  
+  img {
+    max-width: 100%;
+  }
+  
+  /************ IMAGE LAZYLOAD ************/
+  
+  .ratio-container {
+      position: relative;
+      margin: 0 auto;
+      overflow: hidden;
+  }
+  
+  .ratio-container:after {
+      content: '';
+      display: block;
+      height: 0;
+      width: 100%;
+      /* 16:9 = 56.25% = calc(9 / 16 * 100%) */
+      padding-bottom: 56.25%;
+  }
+  .ratio-container > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+  }
+   
+  .lazyload,
+  .lazyloading {
+      opacity: 0;
+  }
+  
+  /* Padding adjustment for kitaplik images */
+  
+  .kitap-ratio:after {
+      // 720 / 480 = 1.5 
+      padding-bottom: 150%;
+  }
+  
+  /* This is for feature images using lqip */
+  
+  .ls-blur-up-img {
+      filter: blur(10px);
+      opacity: 1;
+      transition: opacity 1500ms, filter 1500ms;
+  }
+  
+  /************ Inputs *************/
+  
+  input {
+      background: none;
+      border: none;
+      outline: none;
+  }
+  
+  /************ Layout *************/
+  
+  main {
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+  }
+  
+  .post, .article .wrap {
+      max-width: 33em;
+      display: block;
+      margin: 0 auto;
+      padding: 0 1em;
+  }
+  
+  .article { 
+      flex: 1 0 auto; /* Keeps the footer at the bottom */
+  }
+  
+  .article .page {
+      padding-bottom: 3.2em;
+  }
+  
+  /************ Header *************/
+  
+  header.site-header {
+      position: fixed;
+      width: 100%;
+      display: block;
+      z-index: 10;
+      .wrap {
+          max-width: 100vw;
+          background: $white;
+          padding: 0.5em 0.8em;
+          height: 2.6em;
+          margin-bottom: 0;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+          box-shadow: 0 1px 3px 0 rgba(2, 3, 3, 0.16);
+          nav {
+              ul {
+                  display: flex;
+                  flex-flow: row wrap;
+                  justify-content: space-between;
+                  li {
+                      margin: 0 0 0 calc(0.3em + 1vw);
+                      font-size: $fs8;
+                      a {
+                          padding: 0.5em;
+                          color: $black;
+                          font-weight: bold;
+                          text-transform: uppercase;
+                          margin: 0;
+                          letter-spacing: 0.05em;
+                      }
+                  }
+                  li:first-of-type {
+                      margin: 0;
+                  }
+              }
+          }
+      }
+  }
+  
+  //headroom.js
+  
+  .headroom--pinned {
+      display: block;
+  }
+  
+  /************ Article *************/
+  
+  .article {
+      position: relative;
+      padding-top: 2.6em;
+  }
+  
+  .page-title {
+      font-size: $fs3;
+      margin: 3rem 0 1rem;
+      text-transform: uppercase;
+  }
+
+  .post-image-title {
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 3em;
+    .feature-img {
+        width: 50vw;
+        height: calc(100vh - 3em);
+        max-height: 800px; // This is the max image height
+        position: relative;
+        .image-container {
+            height: 100%;
+            img {
+                object-fit: cover;
+            }
+        }
+        .featured-caption {
+            font-size: $fs6;
+            color: $grey1a;
+            line-height: 1.25;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: hsla(0, 0%, 9%, 0.7);
+            padding: 0.3em 0.5em;
+        }
+    }
+    .post-hgroup {
+        padding: 0 5vw;
+        width: 50vw;
+        max-height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        .post-info {
+            margin-left: 2px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .post-image-title {
+        flex-flow: column nowrap;
+        margin-bottom: 1.5em;
+        .feature-img {
+            width: 100vw;
+            height: 24em;
+        }
+        .post-hgroup {
+            width: 100vw;
+            max-width: 33em;
+            padding: 1.5rem 1em 0.75em;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .post-image-title {
+        .feature-img {
+            height: 20em;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .post-image-title {
+        margin-bottom: 1em;
+        .feature-img {
+            height: 33vh;
+        }
+    }
+}
+  
+  /************ Page info *************/
+  
+  .post-info {
+      line-height: 1.125;
+      font-size: $fs8;
+      padding: 0.4em 0;
+      display: flex;
+      color: $grey5a;
+      white-space: nowrap;
+      a {
+          color: $link;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.03em;
+      }
+      .tag-line {
+          padding: 0 0.5rem;
+          color: rgba(149, 148, 147, 0.9);
+      }
+      #note-cat-link {
+          text-shadow: none;
+          background: none;
+          color: $link;
+      }
+  }
+  
+  /************ Posts and Pages *************/
+  
+  .article .wrap, .post {
+      
+      min-height: 500px;
+  
+      /************ Note *************/
+  
+      .note-header {
+          padding: 3rem 0 0.5em;
+          .note-info {
+              margin-left: 2px;
+          }
+          @media only screen and (max-width: 1024px) {
+              padding-top: 1.5rem;
+          }
+      }
+  
+       /************ Images *************/
+      
+      figure {
+          margin: 1.58em auto;
+      }
+  
+      .note-img {
+          margin: 0.1em -8vw 1.2em;
+          @media only screen and (max-width: 1024px) {
+              max-width: 100vw;
+              position: relative;
+              left: 50%;
+              right: 50%;
+              margin-left: -50vw;
+              margin-right: -50vw;
+          }
+          @media only screen and (max-width: 680px) {
+              .note-caption{
+                  max-width: 100vw;
+                  padding-left: 1.1rem;
+                  padding-right: 1.1rem;
+              }
+          }
+      }
+      
+      /*image caption*/
+          
+      figcaption {
+        font-size: 0.75em;
+        color: $grey5a;
+        line-height: 1.35;
+        margin: 0.35em auto -0.5em;
+        max-width: 41.2em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid $grey1;
+      }
+    }
+  
+  /************ Post Archive *************/
+  
+  .archive-wrap {
+      margin: 0 5vw;
+      .cat-found {
+          padding: 2rem 0 0.3rem;
+          margin-bottom: 0;
+          font-size: $fs4;
+          font-weight: 400;
+          border-bottom: 1px solid $grey7;
+          span {
+              text-transform: uppercase;
+              color: $link;
+              font-weight: 700;
+          }
+      }
+  
+      // Post Listing
+      
+      .post-list {
+          list-style-type: none;
+          list-style: none;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          grid-auto-flow: dense;
+          gap: 3rem 1.5rem;
+          padding: 3rem 0;
+          .post-archive {
+              .archive-image {
+                  img {
+                      object-fit: cover;
+                  }
+              }
+              .archive-post {
+                  .title-text {
+                      h2 {
+                          font-size: $fs4;
+                          margin: 0.9em 0 0.5em;
+                          a {
+                              color: $black;
+                          }
+                      }
+                      .summary {
+                          margin: 0 0 0.8rem;
+                          font-size: $fs5;
+                          line-height: 1.4;
+                          color: $grey6;
+                      }
+                  }
+              }
+          }
+          .post-archive:nth-of-type(1){
+              grid-column: 1/-1;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 0 1.5rem;
+              align-items: center;
+              .archive-image .ratio-container {
+                  height: 20em;
+              }
+              .archive-post {
+                  .title-text {
+                      h2 {
+                          font-size: $fs3;
+                      }
+                  }
+              }
+          }
+          .post-archive:nth-of-type(5){
+              grid-column: 1/3;
+          }
+          .post-archive:nth-of-type(6){
+              grid-column: -3/-1;
+          }
+      }
+      @media only screen and (max-width: 600px) {
+          .post-list {
+              grid-template-columns: 1fr;
+              padding-top: 2rem;
+              .post-archive:nth-of-type(5), 
+              .post-archive:nth-of-type(6) {
+                  grid-column: 1/-1;
+              }
+              .post-archive:nth-of-type(1){
+                  grid-template-columns: 1fr;
+                  .archive-image .ratio-container {
+                    height: auto;
+                }
+                .archive-post .title-text h2 {
+                    font-size: $fs4;
+                }
+              }
+          }
+      }
+  }
+  
+  /************ HOME SECTIONS *************/
+  
+  .home-section {
+      margin: 0 5vw;
+  }
+  .section-header {
+      text-align: center;
+      margin: 1rem 0 0 0;
+      padding-bottom: 0.1em;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      border-bottom: 1px solid $grey7;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+  }
+  
+  .section-inner {
+      padding: 2em 0;
+  }
+  
+  /************ Notes Archive *************/
+  
+.article .wrap{
+    .notes-wrap {
+        margin-top: 3rem;
+        margin-bottom: -2rem;
+    }
+    .note-list {
+        .note-archive {
+            list-style: none;
+            display: flex;
+            flex-flow: row nowrap;
+            margin: 0 0 1em 0;
+            padding-bottom: 1em;
+            border-bottom: 1px solid $grey1;
+            .note-archive-image {
+                flex: 1 2 50%;
+                margin-left: 1rem;
+                img {
+                    object-fit: cover;
+                }
+            }
+            .note-archive-post {
+                flex: 1 0 50%;
+                h2 {
+                    font-size: 1em;
+                    margin: 0;
+                }
+                .note-time {
+                    font-size: $fs8;
+                    color: $grey5a;
+                }
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            .note-archive:not(:first-of-type) {
+                .note-archive-image {
+                    flex: 0 1 5.5em;
+                    .ratio-container {
+                        width: 5.5em;
+                        height: 5.5em;
+                    }
+                }
+            }
+        }
+        .note-archive:first-of-type {
+            flex-flow: column nowrap;
+            border-bottom: 1px solid $text;
+            .note-archive-image {
+                margin-left: 0;
+                order: 1;
+            }
+            .note-archive-post {
+                order: 2;
+                h2 {
+                    margin: 0.8em 0 0.5em;
+                    font-size: $fs4;
+                }
+                p {
+                    font-size: $fs5;
+                    line-height: 1.4;
+                    color: $grey6;
+                    margin-bottom: 0.1em;
+                }
+            }
+        }
+    }
+}
+  
+  /************ Logo *************/
+  
+  .kt-logo{
+      height: auto;
+      width: 5em;
+      vertical-align: middle;
+  }
+  
+  /************ DRAWINGS PAGE *************/
+  
+  .drawing-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2em 1em;
+      margin: 2em 0 3em;
+      .drawing-item {
+          .drawing-img {
+              border: 1px solid $grey1;
+          }
+          .drawing-content {
+              .drawing-title {
+                  font-size: $fsp;
+                  font-weight: 700;
+                  margin: 1rem 0 0.5rem;
+              }
+              p {
+                  font-size: $fs5;
+                  margin-bottom: 0.5rem;
+                  line-height: 1.5;
+              }
+              .drawing-date {
+                  padding: 0;
+              }
+          }
+      }
+  }
+  
+  @media only screen and (max-width: 800px) {
+      .drawing-container {
+          grid-template-columns: 1fr;
+      }
+  }
+  
+  /************ KITAPLAR *************/
+  
+  /* Kitaplik Archive
+  ========================================================================= */
+  
+  .pub-archive-container {
+      display: grid;
+      grid-template-columns: 8em 1fr;
+      margin: 3rem 0;
+      gap: 2rem;
+      .pub-filter {
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: flex-start;
+          @media only screen and (min-width: 600px) {
+            border-right: 4px solid $grey1;
+          }
+          .pub-filter-links {
+            margin-bottom: 0.5rem;
+            padding: 6px 8px;
+            font-size: 12px;
+            margin-right: 4px;
+          }
+      }
+  }
+  
+  @media only screen and (max-width: 600px) {
+      .pub-archive-container {
+          grid-template-columns: 1fr;
+          .pub-filter {
+              flex-flow: row wrap;
+          }
+      }
+  }
+  .kitap-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+      grid-gap: 2rem 0.75rem;
+      .kitap-item {
+          .author-title {
+              h2 {
+                  margin: 0.5em 0 0 0;
+                  font-size: 0.9em;
+                  a {
+                      text-shadow: none;
+                      background: none;
+                  }
+              }
+          }
+          .pub-img {
+              position: relative;
+              border-radius: 4px;
+              box-shadow: 0 1px 3px rgba(0,0,0,.35);
+              img {
+                  border-radius: 4px;
+              }
+              .pub-archive-fav {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  svg {
+                      height: 1em;
+                      width: 1em;
+                      fill: $link;
+                  }
+              }
+          }
+      }
+  }
+  @media only screen and (min-width: 1280px) {
+      .kitap-gallery {
+          grid-template-columns: repeat(4, 1fr);
+      }
+  }
+  
+  /* Kitap Page
+  ========================================================================= */
+  
+  .pub-data {
+    border-top: 1px solid $grey2;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0.25em 0;
+    margin: -0.3rem 0 0.8rem;
+    .pub-data-item {
+        line-height: 1.6;
+        font-size: 0.75em;
+        color: $grey7;
+    }
+      .pub-data-info {
+          font-weight: 700;
+      }
+      .pub-data-item:after {
+          content: "|";
+          color: $grey2;
+          padding: 0 0.4rem;
+      }
+      .pub-stars {
+          .star-icon {
+              color: $link;
+          }
+      }
+      .pub-stars:after {
+          display: none;
+      }
+  }
+  
+  /* Tag Cloud 
+  ========================================================================= */
+  
+  .tag-area{
+      margin: 2em 0;
+      .tag-cloud {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(6em, 1fr));
+          grid-gap: 1em 2em;
+          overflow-x: hidden;
+          padding: 1em 0;
+          list-style: none;
+          li { 
+              a {
+                  background: none !important;
+                  text-shadow: none !important;
+                  display: flex;
+                  flex-flow: row nowrap;
+                  justify-content: space-between;
+                  text-transform: uppercase;
+                  font-size: $fs9;
+                  white-space: nowrap;
+                  .tag-line {
+                      @include dotted-line;
+                      height: 1px;
+                      width: 100%;
+                      align-self: flex-end;
+                      margin: 0 0.3em;
+                  }
+              }
+          }
+      }
+      #tag-list li:first-of-type {
+          display: none;
+      }
+  }
+  
+  /* Search 
+  ========================================================================== */
+  
+  #searchform input[type=search] {
+    font-size: $fs2;
+    width: 100%;
+    height: 1.5em;
+    -webkit-appearance: none;
+    border-radius: 0;
+    margin: 2em 0 1em;
+    border-bottom: 1px solid $grey7;
+    text-decoration: none;
+    transition: border-color 0.2s;
+  }
+  
+  .search-found{
+      margin-top: -1.5em;
+  }
+  
+  #searchform input::placeholder {
+      color: $grey4;
+  }
+  
+  /* MEDIA QUERIES
+  
+  ========================================================================= */
+  
+  @media only screen and (max-width: 600px) {
+      header.site-header{
+          .wrap {
+              padding: 0.6em 0;
+              height: 5.6em;
+              flex-flow: column nowrap;
+              align-items: stretch;
+              .site-logo {
+                  align-self: center;
+                  margin-top: 0.3em;
+              }
+              nav{
+                  padding: 1.05em 5vw 0.35em;
+                  border-top: 1px solid rgba(189, 188, 187, 0.15);
+                  ul {
+                      #menu-item-1 a {
+                          padding-left: 0;
+                      }
+                      #menu-item-5 a {
+                          padding-right: 0;
+                      }
+                  }
+              }
+          }
+      }
+      .article {
+          padding-top: 5.6em;
+      }
+  }

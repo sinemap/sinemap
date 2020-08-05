@@ -1,0 +1,81 @@
+{
+  "@context":"https://schema.org",
+  "@type":"Review",
+  "description":"{{ page.snippet }}",
+  "url":"{{ page.url | absolute_url }}",
+  "mainEntityOfPage":"{{ page.url | absolute_url }}",
+  "inLanguage":"{{ site.locale }}",
+  "datePublished":"{{ page.date | date_to_xmlschema }}",
+  "author":{
+    "@type":"Person",
+    "name":"{{ site.author.name }}",
+    "sameAs": "{{ site.author.twitter }}"
+  },
+  "publisher":{
+    "@type": "Organization",
+    "name": "Karateke",
+    "sameAs": "https://karateke.github.io",
+    "logo":{
+      "@type":"ImageObject",
+      "url":"https://karateke.github.io/icons/avatar.png",
+      "width":"192",
+      "height":"192"
+    }
+  },
+  "itemReviewed":{
+    "@type": {%- if page.type == 'book' -%}"Book"{%- else -%}"Movie"{%- endif -%},
+    "name": "{{ page.title }}",
+    "datePublished": "{{ page.year }}",
+    {%- if page.alternate -%}
+    "alternateName": "{{ page.alternate }}",
+    {%- endif -%}
+    {%- if page.sameAs -%}
+    "sameAs": "{{ page.sameAs }}",
+    {%- endif -%}
+    "image": [{
+      "@type": "ImageObject",
+      "url": "https://karateke.github.io/{{ page.image }}",
+      "width":"1600",
+      "height":"900"
+    }, {
+      "@type": "ImageObject",
+      {%- assign critic_img = page.image -%}
+      {%- assign c = critic_img | split: '.' -%}
+      "url": "https://karateke.github.io/{{ c[0] }}-1280.{{ c[1] }}",
+      "width":"1280",
+      "height":"720"
+    }],
+    {%- if page.collection == 'kitaplar' -%}
+    "publisher": {
+        "@type": "Organization",
+        "name": "{{ page.info }}"
+    },
+    "isbn": "{{ page.isbn }}",
+    "numberOfPages": "{{ page.sayfa }}",
+    {%- endif -%}
+    {%- if page.collection == 'filmler' -%}
+    "duration": "PT{{ page.duration }}M",
+    {%- endif -%}
+    {%- assign g = page.genre | split: ", " -%}
+    "genre": ["{{ g[0] }}"{%- if g[1] -%}, "{{ g[1] }}"{%- endif -%}{%- if g[2] -%}, "{{ g[2] }}"{%- endif -%}],
+    {%- assign sanatci = page.artist | split: ", " -%}
+    {%- if page.collection == 'kitaplar' -%}"author"{%- else -%}"director"{%- endif -%}: [
+      {
+        "@type": "Person",
+        "name": "{{ sanatci[0] }}"
+    }
+    {%- if sanatci[1] -%}
+    ,{
+      "@type": "Person",
+      "name": "{{ sanatci[1] }}"
+    }
+    {%- endif -%}
+  ]
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": {%- if page.stars == "★★★★★" -%}"5"{%- elsif page.stars == "★★★★☆" -%}"4"{%- elsif page.stars == "★★★☆☆" -%}"3"{%- elsif page.stars == "★★☆☆☆" -%}"2"{%- else -%}"1"{%- endif -%},
+    "worstRating": "0",
+    "bestRating": "5"
+  }
+}

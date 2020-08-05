@@ -1,0 +1,42 @@
+{%- if post.image and post.collection != 'kitaplar' and post.collection != 'filmler' -%}
+{%- assign related_image = post.image -%}
+{%- assign r = related_image | split: '.' -%}
+<div class="ratio-container related-img">
+    <img alt="{{ post.title }}" data-sizes="auto" class="lazyload" 
+    data-src="/{{ r[0] }}-320.{{ r[1] }}"
+    data-srcset="/{{ r[0] }}-320.{{ r[1] }} 320w,
+                /{{ r[0] }}-640.{{ r[1] }} 640w,
+                /{{ r[0] }}-960.{{ r[1] }} 960w" />
+    <noscript>
+    <img alt="{{ post.title }}" src="/{{ r[0] }}-640.{{ r[1] }}">
+    </noscript>
+</div>
+{%- elsif post.poster -%}
+{%- assign kitap_image = post.poster -%}
+<div class="ratio-container kitap-ratio">  
+    {%- assign k = kitap_image | split: '.' -%}
+    <img class="lazyload kitap-img" alt="{{ post.title }}" 
+         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
+         data-lowsrc="/{{ k[0] }}-lq.{{ k[1] }}"
+         data-srcset="/{{ k[0] }}-320.{{ k[1] }} 320w,
+                      /{{ k[0] }}.{{ k[1] }} 640w"/>
+    <noscript>
+        <img alt="{{ post.title }}" src="https://karateke.github.io/{{ k[0] }}.{{ k[1] }}">
+    </noscript>
+</div>
+{%- elsif post.content contains "<img" -%}
+{%- assign src = post.content | split: ' data-src="' | last | split:'"' | first -%}
+<div class="ratio-container related-img">
+<img alt="{{ post.title }}" class="lazyload" data-src="{{ src }}" >
+<noscript>
+<img alt="{{ post.title }}" src="{{ src }}">
+</noscript>
+</div>
+{%- else -%}
+<div class="ratio-container related-img">
+<img alt="{{ post.title }}" class="lazyload" data-src="/assets/img/featured/placeholder-320.jpeg">
+<noscript>
+<img alt="{{ post.title }}" src="/assets/img/featured/placeholder-320.jpeg">
+</noscript>
+</div>
+{%- endif -%}

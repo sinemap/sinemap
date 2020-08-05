@@ -1,0 +1,269 @@
+/* Bigfoot 
+   ========================================================================== */
+.bigfoot-footnote__button {
+    position: relative;
+    z-index: 5;
+    top: -.15em;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0 .1em 0 .15em;
+    border: none;
+    cursor: pointer;
+    background-color: $grey1;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    font-size: 0.95em;
+    line-height: 0;
+    vertical-align: middle;
+    transition: background-color 0.25s;
+}
+
+.bigfoot-footnote__button:focus, .bigfoot-footnote__button:hover {
+    outline: none;
+    background-color: $grey7;
+}
+
+.bigfoot-footnote__button:active {
+    background-color: $grey7;
+}
+
+.bigfoot-footnote__button.is-active {
+    background-color: $link;
+    transition-delay: 0.1s;
+}
+
+.bigfoot-footnote__button:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bigfoot-footnote__container {
+    display: inline-block;
+    position: relative;
+    text-indent: 0
+}
+
+@media not print {
+    .footnote-print-only {
+        display: none !important
+    }
+}
+
+@media print {
+    .bigfoot-footnote, .bigfoot-footnote__button {
+        display: none !important
+    }
+}
+
+.bigfoot-footnote {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    max-width: 90%;
+    margin: 2em 0;
+    background: hsl(240, 1%, 95%);
+    opacity: 0;
+    border-radius: .5em;
+    box-shadow: 0.1em 0.1em 0.3em -0.1em $grey4;
+    line-height: 0;
+    transition: all 0.25s;
+    transform: scale(.1) translateZ(0);
+    transform-origin: 50% 0
+}
+
+.bigfoot-footnote.is-positioned-top {
+    top: auto;
+    bottom: 0
+}
+
+.bigfoot-footnote.is-active {
+    transform: scale(1) translateZ(0);
+    opacity: .97
+}
+
+.bigfoot-footnote.is-bottom-fixed {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: auto;
+    transform: translateY(100%);
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    opacity: 1;
+    border-width: 1px 0 0;
+    transition: transform 0.25s;
+}
+
+.bigfoot-footnote.is-bottom-fixed.is-active {
+    transform: translateY(0)
+}
+
+.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__wrapper {
+    margin: 0 0 0 50%;
+    transform: translateX(-50%);
+    max-width: 100%
+}
+
+.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__content,
+.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__wrapper {
+    border-radius: 0
+}
+
+.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__tooltip {
+    display: none
+}
+
+.bigfoot-footnote.is-scrollable:after {
+    content: "\2193";
+    position: absolute;
+    bottom: .3375em;
+    right: .3375em;
+    z-index: 14;
+    display: block;
+    color: $text;
+    background: hsl(240, 1%, 95%);
+    height: .78125em;
+    width: .625em;
+    opacity: .2;
+    transition: opacity 0.25 ease;
+}
+
+.bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:after,
+.bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    z-index: 12;
+    left: 0
+}
+
+.bigfoot-footnote.is-scrollable ::-webkit-scrollbar {
+    display: none
+}
+
+.bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:before {
+  top: -1px;
+  height: 1em;
+  border-radius: 0.5em 0.5em 0 0;
+  background-image: linear-gradient(to bottom, hsla(240, 11%, 98%, 0.9) 50%, rgba(250, 250, 250, 0) 100%);
+}
+.bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:after {
+  bottom: -1px;
+  height: 1em;
+  border-radius: 0 0 0.5em 0.5em;
+  background-image: linear-gradient(to top, hsla(240, 11%, 98%, 0.9) 50%, rgba(250, 250, 250, 0) 100%);
+}
+
+.bigfoot-footnote.is-fully-scrolled:after, .bigfoot-footnote.is-fully-scrolled:before {
+  opacity: 0;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.bigfoot-footnote__wrapper {
+  position: relative;
+  z-index: 14;
+  width: 22em;
+  display: inline-block;
+  box-sizing: inherit;
+  overflow: hidden;
+  margin: 0;
+  background-color: hsl(240, 1%, 95%);
+  border-radius: 0.5em;
+  line-height: 0;
+}
+
+.bigfoot-footnote__content {
+  position: relative;
+  z-index: 8;
+  display: inline-block;
+  max-height: 15em;
+  padding: 1.1em;
+  box-sizing: inherit;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: hsl(240, 1%, 95%);
+  border-radius: 0.5em;
+  -webkit-font-smoothing: subpixel-antialiased;
+  line-height: normal;
+}
+.bigfoot-footnote__content img {
+    max-width: 100%
+}
+
+.bigfoot-footnote__content p a {
+    background: none !important;
+    text-shadow: none !important;
+    color: $link !important;
+}
+
+.bigfoot-footnote__content p {
+    font-size: 0.85em;
+}
+
+.bigfoot-footnote__content :last-child {
+    margin-bottom: 0 !important
+}
+
+.bigfoot-footnote__content :first-child {
+    margin-top: 0 !important
+}
+
+.bigfoot-footnote__tooltip {
+    position: absolute;
+    z-index: 12;
+    box-sizing: border-box;
+    margin-left: -.65em;
+    width: 1.3em;
+    height: 1.3em;
+    transform: rotate(45deg);
+    background: hsl(240, 1%, 96%);
+    opacity: 0.97;
+    box-shadow: 0.1em 0 0.2em 0 $grey4;
+    border-top-left-radius: 0
+}
+
+.is-positioned-bottom .bigfoot-footnote__tooltip {
+    top: -.65em
+}
+
+.is-positioned-top .bigfoot-footnote__tooltip {
+    bottom: -.65em
+}
+
+.bigfoot-footnote__button {
+    position: relative;
+    height: 1em;
+    width: 1.5em;
+    border-radius: .5em
+}
+
+.bigfoot-footnote__button:after {
+    content: attr(data-footnote-number);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    font-size: .66em;
+    font-family: $sans;
+    font-weight: bold;
+    color: $grey7;
+    font-feature-settings: "lnum"; 
+    font-variant-numeric: lining-nums;
+    @include transit;
+}
+
+.bigfoot-footnote__button.is-active:after, .bigfoot-footnote__button:hover:after {
+    color: $white;
+}
+
+.bigfoot-footnote__button__circle {
+    display: none
+}

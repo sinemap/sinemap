@@ -1,0 +1,23 @@
+---
+title: Synonyms
+artist: Nadav Lapid
+image: assets/img/featured/Synonyms-Tom-Mercier.jpeg
+poster: assets/img/kitaplik/synonyms-2019.jpeg
+caption: Tom Mercier - Synonyms filminden bir sahne
+sameAs: https://www.imdb.com/title/tt7016254/
+alternate: Eş Anlamlılar
+year: 2019
+duration: 123
+imdb: 6.6
+genre: Dram
+stars: ★★★☆☆
+type: film
+tags: [filmler-dram, filmler-2000ler]
+description: Nadav Lapid’in yönettiği Synonyms (Eş Anlamlılar) filminin eleştirisi.
+---
+
+Nadav Lapid’in yönetmenliğini yaptığı Synonyms (Eş Anlamlılar), kendi deyimiyle “İsrail’den kaçmak” için Fransa’ya gelen genç Yoav’ın (Tom Mercier) Fransız olma çabalarını anlatıyor. Eski bir asker olan Yoav, anavatanından bezmiş, İsrail’le olan tüm köprülerini yakmaya kararlıdır. Satın aldığı bir cep sözlüğüyle Fransızcasını geliştirmeye çalışırken, İbranice konuşmayı reddetmekte, Fransa’da kendisine sıfırdan yeni bir kimlik inşa etmeye çalışmaktadır. Fransa’daki ilk gününde elbiseleri ve sırt çantası çalınır. Aynı binada yaşayan genç bir Fransız çift olan Emile ve Caroline, Yoav’ı küvette donmak üzere bulur ve onu evlerine alırlar. Zengin bir ailenin oğlu olan Emile, Yoav’ın hikayelerinden etkilenir. Başlangıçta Yoav’a şüpheyle yaklaşan Caroline ise, daha sonra ona ısınır. Daha sonra, Yoav derme çatma bir eve yerleşir, İsrail konsolosluğunda çalışmaya başlar.
+
+Synonyms, aidiyet ve milli kimlikler üzerine bir yapım. Yoav’ın neden İsrail’den kaçmak istediği filmde kesin olarak belirtilmese de, ülkenin militarist kültürünün bunda belirleyici olduğu anlaşılabiliyor. Yoav’ın Fransa’da karşılaştığı ve arkadaş olduğu İsraillilerden biri olan Yaron, bu kültürün şablon temsilcilerinden biri. Bir sahnede Yaron, İsrailli ve Yahudi olduğunu kamusal alanda insanların yüzlerine bağırarak milli kimliğini diri tutmaya çalışırken, bir başka sahnede Yoav, Fransa milli marşını bağırarak söyleyerek aynı milli kimliği reddetmeye çalışıyor. Synonyms gösteriyor ki bu ritüeller, kendimizi bir kimliğe ait hissetmeye zorlamak ancak bir yere kadar işe yarıyor. Bağırarak içimizdeki bazı sesleri dindiremiyoruz. Göçmen olarak, bir yanda ayak uydurmamız beklenen yeni milli kültürün dayatması, diğer yanda peşimizi bir türlü bırakmayan eski aidiyetlerimiz var. 
+
+Yoav eski aidiyetlerinden sıyrılmaya çalışıyor. Ama tüm fedakar uğraşlarına rağmen kendisini çıkmazlarda buluyor. Bastırmaya çalıştığı tarihi ve yetiştiği kültür (onun şiddeti ve maçoluğu) kendisini hep yakalıyor. Synonyms, kültürler arası uyuşmazlıklara, aidiyet yitimlerine, milliyetçiliklere, arafta kalma hallerine dair dikkat çekici ve gerekli bir yapım. Bazı sahneler sembolizm adına lafı çok dolandırsa da genel olarak akıcı bir film. Film boyunca malafatını sıkça görebildiğimiz Tom Mercier’in, Yoav rolünde içine kapanık ve durgun bir halden çok daha abartılı ve teatral bir hale pürüzsüz geçişleri özellikle etkileyici.

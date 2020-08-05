@@ -1,0 +1,18 @@
+<div class="pub-links">
+    <a class="link-box" href="/{{ page.collection }}">
+        {%- if page.collection == 'filmler' -%}
+        <span>Film listesine dön</span>
+        {%- else -%}
+        <span>Kitap listesine dön</span>
+        {%- endif -%}
+    </a>
+    {%- if page.collection == 'filmler' -%}
+    <a class="link-box" href="/kitaplar/">
+        <span>Kitap listesine bak</span>
+    </a>
+    {%- else -%}
+    <a class="link-box" href="/filmler/">
+        <span>Film listesine bak</span>
+    </a>
+    {%- endif -%}
+</div>

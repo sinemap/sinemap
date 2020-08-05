@@ -1,0 +1,29 @@
+---
+title: ile
+artist: Oruç Aruoba
+image: assets/img/featured/aruoba-ile.jpeg
+poster: assets/img/kitaplik/ile.jpeg
+caption: Oruç Aruoba
+year: 1999
+sayfa: 228
+info: Metis Yayınları
+genre: Deneme, Felsefe
+stars: ★★★☆☆
+type: book
+tag: kitaplar-deneme
+description: Oruç Aruoba’nın ile kitabının eleştirisi.
+---
+
+Oruç Aruoba’nın bir kadın ve bir erkek arasındaki ilişkiye dair, felsefi referansları bolca olan denemeleri. Bir olma-bütünleşme isteği, bencillik, samimiyet, kıskançlık ve ayrılık gibi ilişkinin uyandırdığı farklı hallere dair kısa kısa notlar şeklinde yazılmış. Yazarın kendi deyimiyle, _ilişkilerin olanaklılığı_ üzerine bir kitap. 
+
+Kitap, her ne kadar benim için _yeni_ bir şey söylemese de (bu yüzden de oldukça sıkıcı gelse de) Aruoba’nın düşünme ve yazma stiliyle tanışmak açısından faydalı oldu. Bu tarzı beğendiğim için yazarın başka konularda yazdıklarını okumak isterim. Bu metinde kendinize dair bir şeyler bulmanız, ilişkilerdeki çıkmazlara dair yazarla ortak deneyimlere sahip olmanız olası. Daha genç olsam faydalı bir tecrübe aktarımı olarak değerlendirirdim herhalde. Ama şimdi eskimiş sözler olarak hissediliyor. 
+
+Yazarın biraz sevgilisiyle biraz da okurla konuşur gibi anlattığı fikirlerini okudukça, ilişkilere dair kesin ifadelerin (ilişki şudur, şöyledir) bana oldukça itici geldiğini; ilişkinin bir tarafının muhatap ve okuyucu, diğer tarafının yazar ve anlatıcı olduğu durumlarda ilişkiye dair söylenebileceklerin hem içerik hem de etik olarak noksan olabileceğini fark ettim. İlişkiyi somutlamak, çerçevelemek için yazıya dökmenin _ilişkinin suskun tarafı_ açısından boğucu olabileceğini düşündüm. 
+
+---- 
+
+> Bizim senin ile hiç ilişkimiz olmadı ki... --- ile, Oruç Aruoba.
+
+
+
+

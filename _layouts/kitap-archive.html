@@ -1,0 +1,23 @@
+{%- include head-dark.html -%}
+<body>
+{%- include header.html -%}  
+<main class="article archive">  
+    <div class="archive-wrap">
+        <h1 class="page-title">{{ page.title }}</h1>
+        <div class="pub-archive-container">
+            <div class="pub-filter">
+                {%- include pub-filters.html -%}
+            </div> 
+            <div class="kitap-gallery">
+                {%- for post in paginator.posts -%}
+                {%- include pub-archive-item.html -%}
+                {%- endfor -%}
+            </div>  
+        </div>         
+    </div>
+{%- include pagelinks.html -%}
+{%- include popular.html -%}
+{%- include subscription.html -%}
+</main>
+{%- include footer.html -%}
+</body>

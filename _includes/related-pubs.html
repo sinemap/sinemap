@@ -1,0 +1,28 @@
+<aside class="home-section">
+    <h3 class="section-header"><a href="/{{ page.collection }}">{% if page.collection == 'kitaplar' %}kitap{% else %}film{% endif %}</a> eleştirileri</h3>
+<div class="section-inner">
+<div class="related-posts related-pubs">
+{%- assign maxCount = 6 -%}
+{%- assign count = 0 -%}
+{%- if page.collection == 'kitaplar' -%}
+{%- assign sorted-pub = site.kitaplar | sort: 'date' | reverse -%}
+{%- else -%}
+{%- assign sorted-pub = site.filmler | sort: 'date' | reverse -%}
+{%- endif -%}
+{%- for post in sorted-pub -%}
+{%- assign genpage = page.genre | split: ", " | join: ', ' -%}
+{%- assign genpost = post.genre | split: ", " -%}
+{%- if post.title != page.title and post.title != page.previous.title and post.title != page.next.title and count < maxCount and genpage contains genpost[0] or genpage contains genpost[1] or genpage contains genpost[2] -%}
+{%- assign count = count | plus: 1 -%} 
+    <div class="related-item">
+        <a href="{{ site.url }}{{ post.url }}">
+            {%- include related-image.html -%}
+         </a>
+        <h4 class="related-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
+        <div class="related-date"><span>{{ post.stars }}</span></div>
+    </div> 
+{%- endif -%}
+{%- endfor -%}
+</div>
+</div>
+</aside>

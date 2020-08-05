@@ -1,0 +1,12 @@
+{%- assign kitap_image = post.poster -%}
+<div class="ratio-container kitap-ratio">  
+    {%- assign k = kitap_image | split: '.' -%}
+    <img class="lazyload kitap-img" alt="{{ post.title }}" 
+         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
+         data-lowsrc="/{{ k[0] }}-lq.{{ k[1] }}"
+         data-srcset="/{{ k[0] }}-320.{{ k[1] }} 320w,
+                      /{{ k[0] }}.{{ k[1] }} 640w"/>
+    <noscript>
+        <img alt="{{ post.title }}" src="https://karateke.github.io/{{ k[0] }}.{{ k[1] }}">
+    </noscript>
+</div>

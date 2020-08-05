@@ -1,0 +1,27 @@
+---
+title: Monos
+artist: Alejandro Landes
+image: assets/img/featured/monos-sahne.jpeg
+poster: assets/img/kitaplik/monos-2019.jpeg
+caption: Monos filminden bir sahne
+sameAs: https://www.imdb.com/title/tt6062774/
+year: 2019
+duration: 102
+imdb: 7.2
+genre: Dram, Aksiyon
+stars: ★★☆☆☆
+type: film
+tags: [filmler-dram, filmler-aksiyon, filmler-2000ler]
+description: Alejandro Landes’in yönettiği Monos filminin eleştirisi.
+--- 
+
+Alejandro Landes’in yazıp yönettiği Monos, bir Latin Amerika ülkesinde (Kolombiya galiba) çocuk askerlerden oluşan bir gerilla grubunun yoldan çıkışını anlatıyor. Genç gerillalar, “Organizasyon” adı verilen bir örgüte bağlı olarak savaşmakta ve “Doktor” diye seslendikleri ABD’li bir savaş esirine gözcülük etmektedirler. Örgüt emirlerini telsiz ya da birliği arada sırada ziyaret eden yetişkin bir gerilla aracılığıyla alan çocuk askerler, zamanla ipleri kendi ellerine almaya başlarlar.
+
+Monos yoruma hayli açık bir film. Askeri örgütlenmelerin ve emir komuta zincirlerinin bireyi ortadan kaldıran işleyişine dair bir eleştiri göze çarpıyor. Bunun yanında insanlığın ilkel ve vahşi dürtülerinin başıboş bırakıldığında hakim geleceğine dair bir uyarı da mevcut. Bunlar gibi çok defa işlenmiş temaların üzerinden neden tekrar geçme gereğinin görüldüğünü anlamadım. Filmin, bu konulara yaklaşımında yeni bir perspektif geliştirdiğini de hiç sanmıyorum. Sadece filmin trailerini izleseniz “Lord of the Flies” aklınıza gelecekken, _kızağa geçirilmiş domuz kafası_ karesini kullanmak, eğer bir özgünlük iddiası varsa bile o iddiayı zayıf kılıyor. 
+
+Başarılı ses ve görüntü yönetmenliği filmi bir ölçüde kurtarıyor. Monos, gerilla grubunun nezdinde izole olmuşluk ve kaybolmuşluk hislerini başarıyla yansıtıyor. Olayların geçtiği dağ ve ormanların uçsuz bucaksızlığı, herhangi bir mekan adının ya da tarihin kullanılmaması, hikayeyi (filmin içerdiği tüm modern savaş teçhizatına rağmen) uygarlığın ve tarihin dışında bir yerde konumlandırıyor. Genç gerillaların giderek kabilemsi hale gelen ve kuralsızlaşan örgütlenmesi, ahlaki açıdan ve normlar bakımından da bizi tarih-öncesi bir yere taşıyor. 
+
+Monos, Lord of the Flies ve türevlerinin söylediklerinin ötesinde bir söze sahip mi, emin değilim. 
+
+
+

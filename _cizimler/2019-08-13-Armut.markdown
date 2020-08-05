@@ -1,0 +1,6 @@
+---
+title: Armut
+resim: armut-cizim
+---
+
+Yemyeşil bir armut. Henüz olgunlaşmamış.

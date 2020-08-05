@@ -1,0 +1,21 @@
+<section class="author-bio">
+    <div class="bio-img-link">
+        <div class="bio-img">
+            {%- if page.yazar-img -%}
+            <img alt="{{ page.yazar-name }}" class="lazyload" data-src="{{ page.yazar-img }}">
+                <noscript>
+                    <img alt="{{ page.yazar-name }}" src="{{ page.yazar-img }}">
+                </noscript>
+            {%- endif -%}
+        </div>
+        {%- if page.yazar-link -%}
+        <div class="bio-link">
+            <a class="author-link" href="{{ page.yazar-link }}" target="_blank" rel="noopener" title="{{ page.yazar-name }} {{ page.yazar-link-type }} profili">{{ page.yazar-link-type }}</a>
+        </div>
+        {%- endif -%}
+    </div>
+    <div class="bio-text">
+        <h3 class="author-name">{{ page.yazar-name }}</h3>
+        <p>{{ page.yazar-bio }}</p>
+    </div>
+</section>

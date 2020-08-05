@@ -1,0 +1,38 @@
+{
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "url":"{{ page.url | absolute_url }}",
+  "name":"{%- if page.layout == 'kategori' or page.layout == 'tags' -%}{{ page.autopages.display_name }}{%- else -%}{{ page.title }}{%- endif -%}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Karateke",
+    "sameAs": "https://karateke.github.io",
+    "logo":{
+      "@type":"ImageObject",
+      "url":"https://karateke.github.io/icons/avatar.png",
+      "width":"192",
+      "height":"192"
+    }
+  },
+  "mainEntity": {
+      "@type":"ItemList",
+      "numberOfItems": {{ paginator.posts.size }},
+      "itemListElement":[
+        {%- for post in paginator.posts -%} 
+            {%- if post == paginator.posts.first -%}
+          {
+            "@type":"ListItem",
+            "position":1,
+            "url":"{{ post.url | absolute_url }}"
+          }
+            {%- else -%}
+          ,{
+            "@type":"ListItem",
+            "position": {{ forloop.index0 | plus: 1 }},
+            "url":"{{ post.url | absolute_url }}"
+          }
+          {%- endif -%}
+        {%- endfor -%}
+        ]
+    }
+}

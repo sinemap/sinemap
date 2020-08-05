@@ -1,0 +1,8 @@
+<div class="post-info">
+    {%- for category in page.categories -%}
+    <span class="archive-tag"><a href="/{{ category | slugify: 'latin' }}" rel="tag">{{ category }}</a><span aria-hidden="true" class="tag-line">&#124;</span></span>
+    {%- endfor -%}
+    <span class="post-date">{%- include date-schema-pages.html -%}</span>
+    <span aria-hidden="true" class="tag-line">&#124;</span>
+    <span class="post-readtime">{%- include reading-time.html -%}</span>
+</div>

@@ -1,0 +1,34 @@
+{% include head-dark.html %}
+<body>
+{% include header.html %}   
+<main class="article">
+    <article>
+        <div class="post-image-title">         
+            <header class="post-hgroup">
+                {%- include post-info.html -%}
+                <h1 class="post-title">{{ page.title }}</h1>
+                {%- if page.description -%}
+                <div class="page-description">
+                    <p>{{ page.description | smartify }}</p>
+                </div>
+                {%- endif -%}
+            </header>
+            {%- include post-image.html -%}
+        </div>
+        <div class="wrap post">
+            <div class="page-content">
+            {{ content }}
+            </div>
+        {%- if page.yazar-name -%}
+            {%- include author-bio.html -%}
+        {%- endif -%}
+        {%- include tagging.html -%}
+        {%- include sharing.html -%}
+        {%- include page-navigation.html -%}
+        </div>
+    </article>
+    {%- include related-posts.html -%}
+    {%- include subscription.html -%}
+</main>
+{% include footer.html %}
+</body>

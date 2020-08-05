@@ -1,0 +1,16 @@
+---
+title: Parasite
+artist: Bong Joon-ho
+image: assets/img/featured/parasite-sahne.jpeg
+poster: assets/img/kitaplik/parasite.jpeg
+caption: Parasite filminden bir sahne
+year: 2019
+duration: 132
+imdb: 8.5
+genre: Dram, Komedi
+stars: ★★★★☆
+type: film
+tags: [filmler-dram, filmler-komedi, filmler-2000ler]
+---
+
+Bong, yakın dönemde özellikle yoğunlaştığı sınıf savaşı temasına Parasite ile devam ediyor. Film, üçkağıtçı ve yoksul bir ailenin, zengin bir haneye hizmetçiler olarak sızmasının ardından iki sınıf arasındaki karşılaşmalar üzerinde duruyor. Bong, bu karşılaşmalardaki kültürel çatışma dinamiklerini, gündelik hayatın kılcal damarlarında akan eşitsizlik ve dışlanmayı başarıyla ekrana yansıtıyor. Filmde, ezilenlerin kendisini ezenlere tuhaf bir hayranlık geliştirdiği ve düşmanlarını diğer ezilenlerin arasında bulduğu vurgusu özellikle ilgimi cezbetti. Parasite çok iyi bir film. Fakat, belki de mesajlarının fazlaca kör göze parmak olması yüzünden, Bong’un sinemasında ayrıcalıklı bir yer edinemiyor. 

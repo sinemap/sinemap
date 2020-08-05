@@ -1,0 +1,90 @@
+<div class="PageNavigation">   
+    {%- if page.previous.url -%}
+    <div class="nav-link prev">
+        <h3 class="section-header page-nav-header">Önceki</h3>
+        <div class="pagi-link previous-link">
+            <a class="page-nav-img-link" title="önceki sayfa" href="{{ page.previous.url }}">
+                {%- if page.previous.image -%}
+                {%- if page.collection == 'kitaplar' or page.collection == 'filmler' -%}
+                {%- assign nav_image = page.previous.poster -%}
+                {%- else-%}
+                {%- assign nav_image = page.previous.image -%}
+                {%- endif -%}
+                {%- assign n = nav_image | split: '.' -%}
+                <div class="nav-img-container">
+                    <img alt="" class="lazyload nav-img" data-src="/{{ n[0] }}-320.{{ n[1] }}" />
+                    <noscript>
+                        <img alt="" class="nav-img" src="/{{ n[0] }}-320.{{ n[1] }}" />
+                    </noscript>
+                </div>
+                {%- else -%}
+                <div class="nav-img-container">
+                    {%- if page.previous.content contains "<img" -%}
+                    {% assign src = page.previous.content | split: ' data-src="' | last | split:'"' | first %}
+                    <img alt="" class="lazyload nav-img" data-src="{{ src }}"> 
+                    <noscript>
+                        <img alt="" class="nav-img" src="{{ src }}">
+                    </noscript>
+                    {%- else -%}
+                    <img alt="" class="lazyload nav-img" data-src="/assets/img/featured/placeholder-320.jpeg"> 
+                    <noscript>
+                        <img alt="" class="nav-img" src="/assets/img/featured/placeholder-320.jpeg">
+                    </noscript>
+                    {%- endif -%}
+                </div>
+                {%- endif -%}
+            </a>
+            {%- if page.previous.category -%}
+            <a class="page-nav-cat" href="/{{ page.previous.category | slugify: 'latin' }}">{{ page.previous.category }}</a>
+            {%- endif -%}
+            <a class="page-nav-title-link" rel="prev" href="{{ page.previous.url }}">
+                <span class="prev-title">{{ page.previous.title }}</span>
+            </a>
+        </div>
+    </div>                              
+    {%- endif -%}
+    {%- if page.next.url -%}
+    <div class="nav-link next">
+        <h3 class="section-header page-nav-header">Sonraki</h3>
+        <div class="pagi-link next-link">
+            <a class="page-nav-img-link" title="sonraki sayfa" href="{{ page.next.url }}">
+                {%- if page.next.image -%}
+                    {%- if page.collection == 'kitaplar' or page.collection == 'filmler' -%}
+                    {%- assign navnext_image = page.next.poster -%}
+                    {%- else-%}
+                    {%- assign navnext_image = page.next.image -%}
+                    {%- endif -%}
+                {%- assign k = navnext_image | split: '.' -%}
+                <div class="nav-img-container">
+                    <img alt="" class="lazyload nav-img" data-src="/{{ k[0] }}-320.{{ k[1] }}">
+                    <noscript>
+                        <img alt="" class="nav-img" src="/{{ k[0] }}-320.{{ k[1] }}">
+                    </noscript>
+                </div>
+                {%- else -%}
+                <div class="nav-img-container">
+                    {%- if page.next.content contains "<img" -%}
+                    {% assign src = page.next.content | split: ' data-src="' | last | split:'"' | first %}
+                    <img alt="" class="lazyload nav-img" data-src="{{ src }}"> 
+                    <noscript>
+                        <img alt="" class="nav-img" src="{{ src }}">
+                    </noscript>
+                    {%- else -%}
+                    <img alt="" class="lazyload nav-img" data-src="/assets/img/featured/placeholder-320.jpeg"> 
+                    <noscript>
+                        <img alt="" class="nav-img" src="/assets/img/featured/placeholder-320.jpeg">
+                    </noscript>
+                    {%- endif -%}
+                </div>
+                {%- endif -%}
+            </a>
+            {%- if page.next.category -%}
+            <a class="page-nav-cat" href="/{{ page.next.category | slugify: 'latin' }}" >{{ page.next.category }}</a>
+            {%- endif -%}
+            <a class="page-nav-title-link" rel="next" href="{{ page.next.url }}">
+            <span class="next-title">{{ page.next.title }}</span>
+            </a>
+        </div>
+    </div>                    
+    {%- endif -%}
+</div>

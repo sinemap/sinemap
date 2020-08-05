@@ -1,0 +1,42 @@
+---
+title: Dune
+artist: Frank Herbert
+image: assets/img/featured/frank-herbert-writing.jpeg
+poster: assets/img/kitaplik/frank-herbert-dune-1965.jpeg
+caption: Frank Herbert
+sameAs: https://en.wikipedia.org/wiki/Dune_(novel)
+alternate: Dune Chronicles 1
+year: 1965
+sayfa: 528
+info: Ace Books
+isbn: 9780593099322
+genre: Bilimkurgu, Roman
+stars: ★★★☆☆
+type: book
+tag: [kitaplar-roman, kitaplar-bilimkurgu]
+description: Bilimkurgunun önemli isimlerinden Frank Herbert'in yazdığı Dune kitabının eleştirisi.
+snippet: Dune, özgün bir dünya inşa etmesi bakımından, bu dünyanın ekolojik altyapısına verdiği önem bakımından ve siyaset psikolojisine dair güçlü gözlemleri bakımından etkileyici bir eser.
+---
+
+Bilimkurgu edebiyatın köşe taşlarından olan Dune, uzak gelecekte iki rakip hanedanlığın Arrakis gezegeni üzerindeki hakimiyet mücadelesini anlatıyor. Arrakis, büyük kısmı çöllerle kaplı, gelişmemiş, insan yaşamına pek elverişli olmayan bir gezegendir. Gezegende yaşayan Fremen halkının ürettiği _Melange_ denen bir baharat türü, insan hayatını uzattığı ve geleceği görme becerisi kazandırdığı için çok değerli bir kaynak olarak görülmekte ve talep edilmektedir. Evrenin padişahı Shaddam IV'in Atreides Hanedanlığı'nı Arrakis'in yöneticisi olarak atamasıyla, rakip hanedanlık Harkonnenler ile mücadele kızışır. Atreides hanesinin veliahtı Paul, yeni taşındıkları bu zorlu gezegende, çocuk yaşta yüzleşmek zorunda kaldığı hile ve tuzakları özel yetenekleri ile bertaraf etmeye çalışmaktadır. Paul'un çabucak büyümesi, kimliğini keşfetmesi ve büyük roller üstlenmesi gerekecektir. 
+
+Dune, Frank Herbert'in _Dune_ serisinin ilk kitabı. Kitap, birçok temaya ve sayısız referansa sahip. Çevrecilik, kolonyalizm, din ve siyaset ilişkisi, kurtarıcı kişilik, devrim ve reformizm, kader ve irade kitapta öne çıkan temalardan bazıları. Ayrıca, Arap kültürüne ve Ortadoğu-Batı ilişkisine dair referanslara sıkça rastlanıyor. Dune'un özgün yönlerinden birisi, diğer popüler bilimkurgu eserlerinin aksine, teknolojiyi inşa ettiği dünyada arka planda bırakması. Dune'un dünyasında yapay zeka, internet ve insanımsı robotlara rastlamıyoruz. Bunların yerine, geleceğin teknolojileriyle Ortaçağ araç-gereçlerini sentezleyen bir yaklaşım söz konusu. Örneğin, geleceğe dair çıkarımlar teknolojik cihazlar yerine _mentat_ adı verilen geleceği görme yetisine sahip kişilerce elde edilirken, savaşlar kılıç ve mızrak gibi silahlarla yapılıyor. Herbert, bu bakımdan, teknolojiyi merkezine alan geleceğe dair hakim senaryoları bir kenara itip, insanın (özellikle de _özel_ insanların) ön planda olduğu bir geleceği tasarlıyor. 
+
+Dune, hem felsefi hem de psikolojik yönleri güçlü olan bir kitap. Özellikle, hikayenin baş karakteri olan Paul'un Arrakis'te lider konumuna gelebilmesi için geçirdiği olgunlaşma, içsel sorgulamalar ve dönüşüm, Dune'un psikolojik altmetinlerinin belirginleştiği kesitler. Bölümlerin arasındaki, Dune evreninin edebi ve tarihi kaynaklarından yapılan "alıntılar" da kitabın felsefi noktalarının altını çiziyor. Bununla birlikte, Frank Herbert'ün en çok siyasi ve askeri stratejiyle ilgilendiği, hanedanlıkların _Machiavellian_ politikalarına kitabında oldukça geniş bir yer ayırdığı görülüyor.
+
+Dune'un zayıf olduğu birkaç nokta var. Bunlar genelde Herbert'ın özel insanlara yaptığı vurguyla ilişkili. Bunlardan biri karakterlerin kişilik ve yetenekler bakımından aşırı kusursuz olarak resmedilmeleri. Kitabın başkarakterlerini özel insanlar oluşturuyor: Paul gibi her yönden özel birisinin yanı sıra, Paul'un annesi Lady Jessica gibi zihinsel özellikleri bakımından özel olanlar ya da Gurney Halleck gibi askeri donanım bakımından özel olanlar vesaire. Karakterlerde zayıf bir noktanın göze çarpmaması, hepsinin yaptıkları işte mükemmel olmaları, okuyucunun bu karakterlerle özdeşleşmesini, onları "insani" bulmasını, engelliyor. Çokbilmiş ve kendi eksikliklerinden doğan bir yenilgiyi tatmamış karakterler okuyucunun bunlarda kendisinden bir şeyler bulmasının önüne geçiyor. 
+
+Herbert'ın _seçilmiş_ kişiliklere verdiği önemin bir diğer olumsuz yan etkisi karakter gelişimde görülüyor. Bu özel karakterler, zaten zengin ve güçlü hanedanlıklardan gelen, _özel_ olmalarıyla paraları ve siyasi güçleri korelasyonlu tipler. Bu, eğer gerçek dünyayla bir paralellik kurmak için tercih edildiyse mantıklı gelebilir. Ayrıca, hiçten gelen ve bir anda güçlerine kavuşan kahramanlara tezat oluşturduğu için Dune'un özgün duruşunu perçinleyen bir şey. Fakat okuması eğlenceli değil. Kitabın henüz başında mükemmel bir insanmışçasına okuyucuya sunulan başkarakterimiz Paul'un içinden geçtiği büyük bir dönüşüm yok. Yetenekleri bileniyor, deneyimi artıyor, ama karakterin hikayesinde bir kırılma anı, atlanan bir eşik mevcut değil. Dolayısıyla bir _karakter arkından_ bahsetmek zor. Karakterin gelişimini, neredeyse yere parallel düz bir çizgi olarak tarif etmek daha uygun.
+
+Dune benim için biraz hayal kırıklığı oldu. Kitabın sonunu aceleye getirilmiş, açık uçlar bir anda bağlanmaya çalışılmış gibi hissettim. Karakterlerin _mükemmelliği_ itici geldi. Kitabın genel mesajını da fazlaca reformist buldum.
+
+Yine de Dune, özgün bir dünya inşa etmesi bakımından, bu dünyanın ekolojik altyapısına verdiği önem bakımından ve siyaset psikolojisine dair güçlü gözlemleri bakımından etkileyici bir eser.
+
+---- 
+
+> The concept of progress acts as a protective mechanism to shield us from the terrors of the future.
+
+
+
+
+

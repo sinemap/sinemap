@@ -1,0 +1,12 @@
+<article class="post-archive">
+    <div class="archive-image">
+    {%- include archive-image.html -%}
+    </div>
+    <div class="archive-post">
+        <div class="title-text">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2> 
+            <p class="summary">{%- if post.description -%}{{ post.description | smartify }}{%- else -%}{{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}{%- endif -%}</p>
+        </div>
+        {%- include archive-info.html -%} 
+    </div>
+</article>

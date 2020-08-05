@@ -1,0 +1,22 @@
+<aside class="home-section">
+    <h3 class="section-header">Başka notlar</h3>
+<div class="section-inner">
+<div class="related-posts">
+{%- assign maxCount = 4 -%}
+{%- assign count = 0 -%}
+{%- assign sorted-notlar = site.notlar | sort: 'date' | reverse -%}
+{%- for post in sorted-notlar -%}
+{%- if post.title != page.title and post.title != page.previous.title and post.title != page.next.title and count < maxCount -%}
+{%- assign count = count | plus: 1 -%} 
+    <div class="related-item">
+        <a href="{{ site.url }}{{ post.url }}">
+            {%- include related-image.html -%}
+         </a>
+        <h4 class="related-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
+        <div class="related-date"><span>{%- include date-schema.html -%}</span></div>
+    </div> 
+{%- endif -%}
+{%- endfor -%}
+</div>
+</div>
+</aside>

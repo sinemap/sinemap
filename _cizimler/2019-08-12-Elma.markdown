@@ -1,0 +1,6 @@
+---
+title: Elma
+resim: elma-cizim
+---
+
+Kırmızı bir elma. Kiraza da benziyor.

@@ -1,0 +1,46 @@
+{
+    "url":"{{ page.url | absolute_url }}",
+    "image": {
+        "@type": "ImageObject",
+        {%- if page.collection == 'posts' -%}
+        "url": "https://karateke.github.io/{{ page.image }}",
+        "width":"1600",
+        "height":"900"
+        {%- elsif page.layout == 'note' and page.image -%}
+        "url": "https://karateke.github.io/{{ page.image }}",
+        "width":"1280",
+        "height":"720"
+        {%- else -%}
+        "url": "{{ site.url }}/assets/img/featured/placeholder-1280.jpeg",
+        "width":"1280",
+        "height":"720"
+        {%- endif -%}
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Karateke",
+        "sameAs": "https://karateke.github.io",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"https://karateke.github.io/icons/avatar.png",
+          "width":"192",
+          "height":"192"
+        }
+    },
+    "headline":"{{ page.title }}",
+    "dateModified":"{{ page.date | date_to_xmlschema }}",
+    "datePublished":"{{ page.date | date_to_xmlschema }}",
+    "description":"{%- if page.description -%}{{ page.description }}{%- else -%}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{%- endif -%}",
+    "inLanguage":"{{ site.locale }}",
+    "author":{
+        "@type":"Person",
+        "name": "{{ site.author.name }}",
+        "sameAs": "{{ site.author.twitter }}"
+    },
+    "mainEntityOfPage":{
+        "@type":"WebPage",
+        "@id":"{{ page.url | absolute_url }}"
+    },
+    "@type":"BlogPosting",
+    "@context":"https://schema.org"
+}

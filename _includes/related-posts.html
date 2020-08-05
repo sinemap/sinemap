@@ -1,0 +1,49 @@
+{%- unless page.category == null -%}
+{%- capture pageCategory -%}{{ page.category }}{%- endcapture -%}
+{%- if site.categories[pageCategory].size > 4 -%}
+<aside class="home-section">
+    <h3 class="section-header"><a class="related-category" href="/{{ page.category | slugify: 'latin' }}">{{ page.category }}</a> yazıları</h3>
+    <div class="section-inner">
+    <div class="related-posts">
+    {%- assign maxCount = 4 -%}
+    {%- assign count = 0 -%}
+    {%- for post in site.categories[pageCategory] -%}
+    {%- if post.title != page.title and post.title != page.previous.title and post.title != page.next.title and count < maxCount -%}
+    {%- assign count = count | plus: 1 -%}                                       
+        <div class="related-item">
+            <a href="{{ site.url }}{{ post.url }}">
+                {%- include related-image.html -%}
+             </a>
+            <h4 class="related-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
+            <div class="related-date"><span>{%- include date-schema.html -%}</span></div>
+        </div> 
+    {%- endif -%}
+    {%- endfor -%}
+    </div>
+    </div>
+</aside>
+{%- endif -%}
+{%- if site.categories[pageCategory].size < 5 -%}
+<aside class="home-section">
+    <h3 class="section-header"><span class="related-category-none">Gelişigüzel</span> yazılar</h3>
+    <div class="section-inner">
+    <div class="related-posts">
+    {%- assign maxCount = 4 -%}
+    {%- assign count = 0 -%}
+    {%- for post in site.posts offset:10 -%}
+    {%- if post.title != page.title and post.title != page.previous.title and post.title != page.next.title and count < maxCount -%}
+    {%- assign count = count | plus: 1 -%}
+        <div class="related-item">
+            <a href="{{ site.url }}{{ post.url }}">
+            {%- include related-image.html -%}
+            </a>
+            <h4 class="related-title"><a href="{{ site.url }}{{ post.url }}" class="related-item">{{ post.title }}</a></h4>
+            <div class="related-date"><span>{%- include date-schema.html -%}</span></div>
+        </div> 
+    {%- endif -%}
+    {%- endfor -%}
+    </div>
+    </div>
+</aside>
+{%- endif -%}
+{%- endunless -%} 
