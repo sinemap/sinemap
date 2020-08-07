@@ -23,7 +23,7 @@ p {
 
 /************ Sans *************/
 
-input, footer, nav, span a, a.link-box, time, .page-time, .tag-cloud, h2, h3:not(.section-header), h4, h5, h6, .post-title, figcaption, .sans, table, dt, .popular-item, .pub-data, .page-nav-title-link {
+input, footer, nav, span a, a.link-box, time, .page-time, .tag-cloud, h2, h3:not(.section-header), h4, h5, h6, .post-title, figcaption, .sans, table, dt, .pub-data, .page-nav-title-link {
     font-family: $sans;
     font-variant-numeric: lining-nums;
 }
@@ -50,7 +50,7 @@ h1 {
 
 .post-title {
     margin: 0;
-    padding: 0.8rem 0 0.75rem;
+    padding: 0.75rem 0;
 }
 
 h1, h2, h3, h4 {
@@ -436,7 +436,7 @@ header.site-header {
                     font-size: $fs8;
                     a {
                         padding: 0.5em;
-                        color: $white;
+                        color: $grey1;
                         font-weight: bold;
                         text-transform: uppercase;
                         margin: 0;
@@ -1001,10 +1001,10 @@ header.site-header {
                         }
                     }
                     .summary {
-                        margin: 0 0 0.8rem;
+                        margin: 0 0 0.5rem;
                         font-size: $fs5;
                         line-height: 1.4;
-                        color: $grey7;
+                        color: $grey6;
                     }
                 }
             }
@@ -1105,7 +1105,7 @@ header.site-header {
                 margin: 0.9em 0 0.5em;
             }
             .summary {
-                margin: 0 0 0.8rem;
+                margin: 0 0 0.5rem;
                 font-size: $fs5;
                 line-height: 1.4;
                 color: $grey6;
@@ -1125,7 +1125,8 @@ header.site-header {
         display: flex;
         flex-flow: column nowrap;
         line-height: 1.2;
-        font-size: 0.9em;
+        font-size: 1em;
+        font-weight: 700;
         margin: 0.3em 0;
         .popular-img a .ratio-container{
             height: 8em;
@@ -1137,7 +1138,7 @@ header.site-header {
             }
         }
         .popular-number {
-            color: $link;
+            color: $accent;
             font-weight: 700;
         }
         .popular-number:after {
@@ -1357,7 +1358,7 @@ footer {
             display: flex;
             align-items: center;
             a {
-                color: $grey1;
+                color: $grey2;
                 font-size: $fs8;
                 font-weight: 700;
                 margin: 0 0.75em;
@@ -1572,6 +1573,7 @@ footer {
                 font-size: $fsp;
                 line-height: 1.125;
                 margin-top: 1rem;
+                font-weight: 700;
             }
             @media (hover) { // prevent touch device hover
                 a:hover {
