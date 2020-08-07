@@ -13,13 +13,6 @@ author:
   bio:            "Sinemap Editörü"
   email:          "sinemapmail@@gmail.com"
   twitter:        "https://twitter.com/Ufuk_Kizilgedik"
-  
-social: 
-    name: "Sinemap"
-    links: 
-        - "https://twitter.com/Ufuk_Kizilgedik"
-        - "https://www.facebook.com/mormamut"
-        - "https://www.instagram.com/klapsimo/"
 
 tools:
   standards:      "HTML, SCSS, Jekyll"

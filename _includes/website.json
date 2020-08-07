@@ -3,7 +3,10 @@
     "publisher": {
         "@type": "Organization",
         "name": "{{ site.title }}",
-        "sameAs": "{{ site.url }}",
+        "sameAs": [
+            "{{ site.url }}",
+            "{{ site.twitter }}"
+        ],
         "logo":{
           "@type":"ImageObject",
           "url":"{{ site.url }}/icons/avatar.png",
