@@ -1,6 +1,6 @@
 /************ Basic *************/
 body {
-  color: $text;
+  color: $grey7;
   font-family: $serif;
   background-color: $white;
   -webkit-font-smoothing: antialiased;
@@ -23,7 +23,7 @@ p {
 
 /************ Sans *************/
 
-input, footer, nav, span a, a.link-box, time, .page-time, .tag-cloud, h2, h3:not(.section-header), h4, h5, h6, .post-title, figcaption, .subs-form, .sans, table, dt, .popular-item, .pub-data, .page-nav-title-link {
+input, footer, nav, span a, a.link-box, time, .page-time, .tag-cloud, h2, h3:not(.section-header), h4, h5, h6, .post-title, figcaption, .sans, table, dt, .popular-item, .pub-data, .page-nav-title-link {
     font-family: $sans;
     font-variant-numeric: lining-nums;
 }
@@ -105,7 +105,7 @@ h6 {
 /************ Links ************/
 
 a, a:visited, a:active {
-    color: $text;
+    color: $grey7;
     transition: 0.2s color ease-out;
     text-decoration: none;
 }
@@ -126,8 +126,8 @@ a, a:visited, a:active {
     @media (hover) {
         a:hover {
             background: $anchor;
-            color: $text;
             box-shadow: none;
+            color: $grey7;
         }
     }
 }
@@ -245,7 +245,7 @@ blockquote p{
     margin: $lh 0;
     border:1px solid rgba(0, 0, 0, 0.3);
     border-radius: 0.5em;
-    background: $accent;
+    background: $grey2;
     overflow: hidden;
     p {
         margin: 0;
@@ -1177,29 +1177,27 @@ header.site-header {
 
 .subs-text {
     line-height: 1.4;
-    font-size: .9em;
+    font-size: 1em;
     margin-bottom: 1.5em;
     margin-top: -1rem;
     color: $grey2;
 }
 
 .subs-bar {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    width: 20em;
+    max-width: 90vw;
+    margin: 0.5em auto;
 }
 
-#mce-EMAIL {
+#mce-EMAIL, #mce-FNAME {
     font-size: 1em;
     padding: 0.6em 0;
-    width: 16em;
-    max-width: calc(88vw - 2em);
     border: 1px solid $grey3;
-    border-radius: 0;
     background: $grey1;
     margin-bottom: 1em;
     text-indent: 0.6em;
-    border-radius: 4px 0 0 4px;
+    border-radius: 4px;
+    width: 100%;
 }
 
 #mce-EMAIL::placeholder {
@@ -1207,8 +1205,10 @@ header.site-header {
 }
 
 #mce-EMAIL:active,
-#mce-EMAIL:focus {
-    border-color: $link;
+#mce-EMAIL:focus, 
+#mce-FNAME:active,
+#mce-FNAME:focus {
+    border-color: $accent;
     background: $white;
 }
 
@@ -1222,7 +1222,7 @@ header.site-header {
     transition: all 0.25s ease-out;
     font-weight: 700;
     -webkit-appearance: none;
-    border-radius: 0 4px 4px 0;
+    border-radius: 4px;
 }
 
 #mc-embedded-subscribe:active,
@@ -1233,24 +1233,17 @@ header.site-header {
     cursor:pointer;
 }
 
-@media only screen and (max-width: 510px) {
-    #mc-embedded-subscribe,
-    #mce-EMAIL {
-        border-radius: 4px;
-    }
-}
-
 /**
  * Errors
  */
 .error {
-    border-color: $link;
+    border-color: $accent;
 }
 
 .error-message {
     font-size: $fs5;
     line-height: 1.2;
-    margin: -1em 0 1em 0;
+    margin: -0.8em 0 1em;
     display: none;
     text-align: left;
     color: $grey2;
@@ -1258,20 +1251,18 @@ header.site-header {
 
 .error-message:before {
     content: "!";
-    color: $link;
+    color: $accent;
     padding-right: 0.4em;
     font-weight: bold;
     font-style: normal;
 }
 
 .success-message {
-  font-style: italic;
   font-size: $fs5;
   margin: 1em auto;
   text-align: left;
   line-height: 1.4;
-  padding: 0 1em;
-  color: $grey2;
+  color: $grey1;
 }
 
 .mc-status:focus {
@@ -1325,7 +1316,7 @@ header.site-header {
         }
         .note-archive:first-of-type {
             flex-flow: column nowrap;
-            border-bottom: 1px solid $text;
+            border-bottom: 1px solid $grey7;
             .note-archive-image {
                 margin-left: 0;
                 order: 1;
@@ -1419,7 +1410,7 @@ footer {
             font-weight: 700;
             letter-spacing: 0.15em;
             span {
-                color: $grey1;
+                color: $grey4;
             }
             .identity-logo {
                 height: 18px;
@@ -1739,7 +1730,7 @@ footer {
 }
 
 #searchform input[type=search]:focus {
-    border-color: $link;
+    border-color: $accent;
 }
 
 .search-item {
@@ -1847,7 +1838,7 @@ footer {
                     #menu-item-1 a {
                         padding-left: 0;
                     }
-                    #menu-item-5 a {
+                    #menu-item-4 a {
                         padding-right: 0;
                     }
                 }

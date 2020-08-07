@@ -5,11 +5,11 @@ canonical:        "https://sinemap.netlify.app"
 url: "https://sinemap.netlify.app" 
 logo: "/icons/avatar.png"
 locale: "tr_TR"
-twitter: "https://twitter.com/Karateke19"
+twitter: "https://twitter.com/Sinemap4"
 
 # Owner/author information
 author:
-  name:           "Ufuk Kizilgedik"
+  name:           "Ufuk Kızılgedik"
   bio:            "Sinemap Editörü"
   email:          "sinemapmail@@gmail.com"
   twitter:        "https://twitter.com/Ufuk_Kizilgedik"

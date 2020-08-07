@@ -1,6 +1,6 @@
 /************ Basic *************/
 body {
-    color: $text;
+    color: $grey7;
     font-family: $serif;
     background-color: $white;
     -webkit-font-smoothing: antialiased;
@@ -86,7 +86,7 @@ body {
   /************ Links ************/
   
   a, a:visited, a:active {
-      color: $text;
+      color: $grey7;
       text-decoration: none;
   }
   
@@ -483,7 +483,7 @@ body {
           }
           .note-archive:first-of-type {
               flex-flow: column nowrap;
-              border-bottom: 1px solid $text;
+              border-bottom: 1px solid $grey7;
               .note-archive-image {
                   margin-left: 0;
                   order: 1;
@@ -694,11 +694,14 @@ body {
                       #menu-item-1 a {
                           padding-left: 0;
                       }
-                      #menu-item-5 a {
+                      #menu-item-4 a {
                           padding-right: 0;
                       }
                   }
               }
           }
       }
+      .article {
+        padding-top: 5.6em;
+    }
   }

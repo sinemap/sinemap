@@ -5,22 +5,14 @@
     {%- assign a = archive_image | split: '.' -%}
     <img alt="{{ post.title }}" data-sizes="auto" class="lazyload arch-img"
             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-            data-lowsrc="/{{ a[0] }}-lq.{{ a[1] }}"
-            {%- if post.layout == 'post' -%} 
+            data-lowsrc="/{{ a[0] }}-lq.{{ a[1] }}" 
             data-srcset="/{{ a[0] }}-320.{{ a[1] }} 320w,
                          /{{ a[0] }}-640.{{ a[1] }} 640w,
                          /{{ a[0] }}-960.{{ a[1] }} 960w,
                          /{{ a[0] }}-1280.{{ a[1] }} 1280w,
                          /{{ a[0] }}.{{ a[1] }} 1600w" />
-            {%- endif -%}
-            {%- if post.layout == 'note' -%} 
-            data-srcset="/{{ a[0] }}-320.{{ a[1] }} 320w,
-            /{{ a[0] }}-640.{{ a[1] }} 640w,
-            /{{ a[0] }}-960.{{ a[1] }} 960w,
-            /{{ a[0] }}.{{ a[1] }} 1280w" />
-            {%- endif -%}
         <noscript>
-        <img alt="{{ post.title }}" class="archive-img-fallback" src="/{{ a[0] }}-640.{{ a[1] }}">
+        <img alt="{{ post.title }}" class="archive-img-fallback" src="/{{ a[0] }}-960.{{ a[1] }}">
         </noscript>
      </div>
 </a>
@@ -37,9 +29,9 @@
 {%- else -%}
 <a href="{{ post.url }}">
     <div class="ratio-container"> 
-        <img alt="{{ post.title }}" class="lazyload" data-src="/assets/img/featured/placeholder-640.jpg">
+        <img alt="{{ post.title }}" class="lazyload" data-src="/assets/img/featured/placeholder-960.jpg">
         <noscript>
-            <img alt="{{ post.title }}" class="archive-img-fallback" src="/assets/img/featured/placeholder-640.jpg">
+            <img alt="{{ post.title }}" class="archive-img-fallback" src="/assets/img/featured/placeholder-960.jpg">
         </noscript>
     </div>
 </a>

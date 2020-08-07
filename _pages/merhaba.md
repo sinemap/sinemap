@@ -9,7 +9,7 @@ Ben Ufuk. Sinemap, sinema üzerine bir blog. Burada genelde film eleştirileri y
 
 Bu sitede, [Filmler](/filmler/) başlığı altında eleştirilerimi bulabilirsiniz. [Blog](/blog/) başlığı altında ise sinema ve (nadiren) TV ile ilgili yazılarım var. Sinema dışı konularda yazdıklarımı kişisel blogum [Karateke'de](https://karateke.github.io/) topluyorum.
 
-Buraya yazdıklarımdan haberdar olmak için birkaç yol var. Blogumun twitter hesabını takip edebilirsiniz. Siteyi [RSS feed’e](/feed.xml/) ekleyebilirsiniz. Ya da yazıları email olarak almak isterseniz, email adresinizi [şuraya](/#subscription) girebilirsiniz.
+Buraya yazdıklarımdan haberdar olmak için birkaç yol var. Blogumun [twitter hesabını](https://twitter.com/Sinemap4) takip edebilirsiniz. Siteyi [RSS feed’e](/feed.xml/) ekleyebilirsiniz. Ya da yazıları email olarak almak isterseniz, email adresinizi [şuraya](/#subscription) girebilirsiniz.
 
 Web tasarımına biraz ilgim var. Bu siteyi Jekyll, Github, Gulp ve Netlify kullanarak kurdum.
 
