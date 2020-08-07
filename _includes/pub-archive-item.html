@@ -1,15 +1,10 @@
 <div class="kitap-item">
     <div class="pub-img">
-        <a href="{{ site.url }}{{ post.url }}">
+        <a href="{{ post.url }}">
         {%- include kitap-image.html -%}
-        {%- if post.stars == "★★★★★" -%}
-        <div class="pub-archive-fav">
-            <svg class="icon heart-icon" aria-hidden="true" viewBox="0 0 32 32"><path d="M31 11.12A8.2 8.2 0 0 0 22.73 3 8.3 8.3 0 0 0 16 6.4 8.3 8.3 0 0 0 9.28 3 8.2 8.2 0 0 0 1 11.12c0 .64.08 1.25.22 1.85 1.15 7 9.09 14.4 14.78 16.43 5.69-2.03 13.63-9.43 14.78-16.43a7.86 7.86 0 0 0 .22-1.85z"/></svg>
-        </div>
-        {%- endif -%}
         </a>
     </div>
     <div class="author-title">
-        <h2><a class="kitap-link" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+        <h2><a class="kitap-link" href="{{ post.url }}">{{ post.title }}</a></h2>
     </div>
 </div>

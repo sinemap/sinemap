@@ -1,6 +1,0 @@
----
-title: Bardak
-resim: bardak-cizim
----
-
-İçine viski koyacaktım. Olmadı. 

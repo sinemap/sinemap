@@ -1,8 +1,10 @@
 <div class="post-info">
-    {%- for category in page.categories -%}
-    <span class="archive-tag"><a href="/{{ category | slugify: 'latin' }}" rel="tag">{{ category }}</a><span aria-hidden="true" class="tag-line">&#124;</span></span>
-    {%- endfor -%}
+    <span class="archive-tag">
+        {%- if page.collection == "posts" -%}
+        <a href="/filmler" rel="tag">Filmler</a>
+        {%- else -%}
+        <a href="/{{ page.collection }}" rel="tag">{{ page.collection }}</a>
+        {%- endif -%}
+    </span>
     <span class="post-date">{%- include date-schema-pages.html -%}</span>
-    <span aria-hidden="true" class="tag-line">&#124;</span>
-    <span class="post-readtime">{%- include reading-time.html -%}</span>
 </div>

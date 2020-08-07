@@ -5,7 +5,7 @@
     "@type":"ListItem",
     "position":1,
     "name":"Filmler",
-    "item":"https://karateke.github.io/filmler/"
+    "item":"{{ site.url }}/filmler/"
     },{
     "@type":"ListItem",
     "position":2,

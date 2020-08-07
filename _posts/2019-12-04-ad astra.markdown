@@ -1,0 +1,29 @@
+---
+title: Ad Astra
+artist: James Gray
+permalink: /filmler/ad-astra-2019/
+image: assets/img/featured/ad-astra-sahne.jpg
+poster: assets/img/kitaplik/adastra.jpg
+caption: Ad Astra filminden bir sahne
+sameAs: https://www.imdb.com/title/tt2935510/
+year: 2019
+duration: 123
+imdb: 7.0
+genre: Bilimkurgu, Dram
+stars: ★★★★☆
+type: film
+tags: [Bilimkurgu, Dram]
+description: James Gray ’in yönettiği Ad Astra filminin eleştirisi.
+snippet: Ad Astra, verdiği mesajlar bakımından alabileceği bazı riskleri almaktan geri dursa da tematik olarak tutarlı, temel derdini derli toplu anlatabilen bir film.
+--- 
+
+Ad Astra, dünya dışı varlıkların izini ararken dünya ile iletişimi kesilen babasını bulmak için yola çıkan bir astronotun öyküsü. Clifford McBride (Tommy Lee Jones), uzayda yaşam bulmaya ömrünü adamış efsane bir astronotken, 30 yıl boyunca sürdürdüğü görevi artık bir çıkmaza girmiştir. McBride’ın uzay gemisi Neptün yörüngesinde takılmış, gemide oluşan bir arıza, yarattığı enerji dalgalarıyla Dünya’yı tehdit etmektedir. Bu tehdidi ortadan kaldırmak için, hem McBride’ın oğlu, hem de babası gibi çok başarılı bir astronot olan Roy görevlendirilir. Roy, uzayda maceralı ve dolambaçlı bir güzergah izleyerek, uzun zaman önce temasını yitirdiği babasıyla yeniden kavuşmaya çabalar. 
+
+Ad Astra’da, yönetmen James Gray idealist fakat sevgisiz bir babayla kurulan ilişkiye odaklanıyor. Bu ilişkideki çocuk, Roy, uzun misyonu sırasında babasının geri dönmesini beklemiş, karakteri babasından miras aldığı disiplin, idealizm ve soğuklukla yoğrulmuş biridir. Roy’un babasının izinde giriştiği uzay yolculuğu, aynı zamanda, babasının ona miras bıraktıklarıyla, terk edilmenin öfkesi ve acısıyla yüzleşmesini içeren içsel bir yolculuk olarak kurgulanmış. Çocuklukta kırılmış bir benliğin onarılması, karakterimizin sağlıksız yönlerini tanımamıza kapı aralayacak ebeveynin izinde böyle bir yolculuğu belki de gerekli kılıyor.
+
+Ad Astra, insanlar arası temasın önemine, _soğuk evreni ısıtan şeyin_ sevgi olduğuna falan vurgu yapıyor. Daha ikincil temalar olarak işlenmiş olsa da, kapitalizm ve ulus devlet ideolojilerinin dünya ötesini de şekillendirme hırsının gösterilmesi ve bunun uzayın keşfiyle ilgili popüler iyimserliğin karşısına konulması hoşuma gitti. Başarılı fakat mesafeli, sevgisiz ve bencil babaların çocukları üzerinde bıraktığı [erkeklik mirasının](https://www.nytimes.com/2019/09/19/movies/ad-astra-review-brad-pitt.html?referrer=google_kp) sorgulanması da öyle. Ad Astra, verdiği mesajlar bakımından alabileceği bazı riskleri almaktan geri dursa da tematik olarak tutarlı, temel derdini derli toplu anlatabilen bir film. 
+
+Bu temel derdin felsefi derinliği ve işlenişi, Ad Astra’yı yakın zaman uzay filmlerinden (The Martian, Interstellar, Gravity vs.) daha iyi bir film kılıyor. Görsellik ve müzik bakımından da onlardan aşağı kalan bir yanı yok. Görece durağan olan film, başrolüne filmi taşıma noktasında büyük bir sorumluluk yüklese de, Brad Pitt izlediğim en iyi performanslarından biriyle bu işin altından hakkıyla kalkıyor. 
+
+
+

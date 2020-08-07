@@ -1,9 +1,7 @@
 <div class="post-info">
-    {%- for category in post.categories -%}
-    <span class="archive-tag"><a href="/{{ category | slugify: 'latin' }}" rel="tag">{{ category }}</a><span aria-hidden="true" class="tag-line">&#124;</span></span>
-    {%- endfor -%}
-    {%- if post.collection != 'posts' -%}
-    <span class="archive-tag"><a id="note-cat-link" {%- if post.collection == 'notlar' -%} href="/notlar/" {%- elsif post.collection == 'filmler' -%} href="/filmler/" {%- else -%} href="/kitaplar/" {%- endif -%}>{{ post.collection }}</a><span aria-hidden="true" class="tag-line">&#124;</span></span>
-    {%- endif -%}
-    <span class="post-date">{%- include date-schema.html -%}</span>
+    <span>
+        {%- if post.stars -%}
+        <span class="post-stars">{{ post.stars }}</span>
+        {%- endif -%}
+    </span>
 </div>

@@ -1,8 +1,8 @@
-title:            "Karateke"
-tagline:          "Toplum, insan, kitap ve sinema üzerine yazılar"
-description:      "Toplum, insan, kitap ve sinema üzerine yazılar. Eleştirel düşüncenin adresi."
-canonical:        "https://karateke.github.io"
-url: "https://karateke.github.io" 
+title:            "Sinemap"
+tagline:          "Sinema yazıları"
+description:      "Sinema ve TV üzerine yazılar ve film eleştirileri."
+canonical:        "https://sinemap.netlify.app"
+url: "https://sinemap.netlify.app" 
 logo: "/icons/avatar.png"
 locale: "tr_TR"
 twitter: "https://twitter.com/Karateke19"
@@ -10,18 +10,16 @@ twitter: "https://twitter.com/Karateke19"
 # Owner/author information
 author:
   name:           "Ufuk Kizilgedik"
-  bio:            "A sweet boi named Karateke"
-  email:          "karateke.github@gmail.com"
+  bio:            "Sinemap Editörü"
+  email:          "sinemapmail@@gmail.com"
   twitter:        "https://twitter.com/Ufuk_Kizilgedik"
   
 social: 
-    name: "Karateke"
+    name: "Sinemap"
     links: 
         - "https://twitter.com/Ufuk_Kizilgedik"
         - "https://www.facebook.com/mormamut"
         - "https://www.instagram.com/klapsimo/"
-  
-google_analytics: "UA-128618889-1"
 
 tools:
   standards:      "HTML, SCSS, Jekyll"
@@ -39,12 +37,8 @@ lang: tr
 links:
   - title: YAZILAR
     url: /
-  - title: NOTLAR
-    url: /notlar
-  - title: KİTAP
-    url: /kitap
-  - title: FİLM
-    url: /film
+  - title: BLOG
+    url: /blog
   - title: ARA
     url: /ara
 
@@ -54,7 +48,7 @@ future:      true
 highlighter: rouge
 
 # Jekyll configuration
-permalink: /:categories/:title/
+permalink: /filmler/:title/
 
 kramdown:
   auto_ids: true
@@ -83,18 +77,9 @@ plugins:
   - jekyll-sitemap
     
 collections:
-  notlar:
+  blog:
     output: true
     permalink: /:collection/:title/
-  kitaplar:
-    output: true
-    permalink: /:collection/:title/
-  filmler:
-    output: true
-    permalink: /:collection/:title/
-  cizimler:
-    output: false
-    permalink: /cizimler/
 
 defaults: 
   - 
@@ -103,35 +88,21 @@ defaults:
         type: "posts"
     values: 
         layout: "post"
-        master: "true" #this is for looping through all documents in feed.xml 
-        image: /assets/img/featured/placeholder-960.jpeg
+        master: "true" #this is for looping through all documents in feed.xml
+        image: /assets/img/featured/placeholder-960.jpg
   -
     scope:
       path: _pages
       type: "pages"
     values:
       layout: "page"
-      image: /assets/img/featured/placeholder-960.jpeg
+      image: /assets/img/featured/placeholder-960.jpg
   -
     scope:
-      path: _notlar
-      type: "notlar"
+      path: _blog
+      type: "blog"
     values:
-      layout: "note"
-      master: "true"
-  -
-    scope:
-      path: _kitaplar
-      type: "kitaplar"
-    values:
-      layout: "note"
-      master: "true"
-  -
-    scope:
-      path: _filmler
-      type: "filmler"
-    values:
-      layout: "note"
+      layout: "post"
       master: "true"
 
 pagination:
@@ -145,21 +116,14 @@ pagination:
 autopages:
   enabled: true
   categories:
-    enabled: true
-    layouts:
-      - "kategori.html"
-    title: ":cat kategorisindeki tüm yazılar" # :cat is replaced by the cat name
-    slugify:
-      mode: 'latin'
-      cased: true
-    permalink: "/:cat"
+    enabled: false
   collections:
     enabled: false
   tags:
     enabled: true
     layouts:
       - "tags.html"
-    title: ":tag etiketine sahip tüm yazılar" # :tag is replaced by the tag name
+    title: ":tag filmleri" # :tag is replaced by the tag name
     slugify:
       mode: 'latin'
       cased: true

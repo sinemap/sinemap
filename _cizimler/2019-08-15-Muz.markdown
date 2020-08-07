@@ -1,6 +1,0 @@
----
-title: Muz
-resim: muz-cizim
----
-
-Bu muzla birlikte çizim yeteneklerimin sınırlarına oldukça yaklaşmış bulunuyorum. 

@@ -1,13 +1,11 @@
 <aside class="home-section">
-    <h3 class="section-header"><a href="/{{ page.collection }}">{% if page.collection == 'kitaplar' %}kitap{% else %}film{% endif %}</a> eleştirileri</h3>
+    <h3 class="section-header">Film eleştirileri</h3>
 <div class="section-inner">
 <div class="related-posts related-pubs">
 {%- assign maxCount = 6 -%}
 {%- assign count = 0 -%}
-{%- if page.collection == 'kitaplar' -%}
-{%- assign sorted-pub = site.kitaplar | sort: 'date' | reverse -%}
-{%- else -%}
-{%- assign sorted-pub = site.filmler | sort: 'date' | reverse -%}
+{%- if page.collection == 'posts' -%}
+{%- assign sorted-pub = site.posts | sort: 'date' | reverse -%}
 {%- endif -%}
 {%- for post in sorted-pub -%}
 {%- assign genpage = page.genre | split: ", " | join: ', ' -%}

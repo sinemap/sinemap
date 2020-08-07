@@ -1,11 +1,11 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Karateke",
-  "url": "https://karateke.github.io",
+  "name": "{{ site.title }}",
+  "url": "{{ site.url }}",
   "logo":{
     "@type":"ImageObject",
-    "url":"https://karateke.github.io/icons/avatar.png",
+    "url":"{{ site.url }}/icons/avatar.png",
     "width":"192",
     "height":"192"
   }

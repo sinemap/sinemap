@@ -65,14 +65,15 @@
     box-sizing: border-box;
     max-width: 90%;
     margin: 2em 0;
-    background: hsl(240, 1%, 95%);
+    background: $bigcolor;
     opacity: 0;
     border-radius: .5em;
     box-shadow: 0.1em 0.1em 0.3em -0.1em $grey4;
     line-height: 0;
     transition: all 0.25s;
     transform: scale(.1) translateZ(0);
-    transform-origin: 50% 0
+    transform-origin: 50% 0;
+    color: $grey7;
 }
 
 .bigfoot-footnote.is-positioned-top {
@@ -126,11 +127,9 @@
     right: .3375em;
     z-index: 14;
     display: block;
-    color: $text;
-    background: hsl(240, 1%, 95%);
+    color: $grey3;
     height: .78125em;
     width: .625em;
-    opacity: .2;
     transition: opacity 0.25 ease;
 }
 
@@ -151,13 +150,13 @@
   top: -1px;
   height: 1em;
   border-radius: 0.5em 0.5em 0 0;
-  background-image: linear-gradient(to bottom, hsla(240, 11%, 98%, 0.9) 50%, rgba(250, 250, 250, 0) 100%);
+  background-image: linear-gradient(to bottom, $bigcolor 50%, rgba(250, 250, 250, 0) 100%);
 }
 .bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:after {
   bottom: -1px;
   height: 1em;
   border-radius: 0 0 0.5em 0.5em;
-  background-image: linear-gradient(to top, hsla(240, 11%, 98%, 0.9) 50%, rgba(250, 250, 250, 0) 100%);
+  background-image: linear-gradient(to top, $bigcolor 50%, rgba(250, 250, 250, 0) 100%);
 }
 
 .bigfoot-footnote.is-fully-scrolled:after, .bigfoot-footnote.is-fully-scrolled:before {
@@ -174,7 +173,7 @@
   box-sizing: inherit;
   overflow: hidden;
   margin: 0;
-  background-color: hsl(240, 1%, 95%);
+  background-color: $bigcolor;
   border-radius: 0.5em;
   line-height: 0;
 }
@@ -188,7 +187,7 @@
   box-sizing: inherit;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: hsl(240, 1%, 95%);
+  background-color: $bigcolor;
   border-radius: 0.5em;
   -webkit-font-smoothing: subpixel-antialiased;
   line-height: normal;
@@ -223,7 +222,7 @@
     width: 1.3em;
     height: 1.3em;
     transform: rotate(45deg);
-    background: hsl(240, 1%, 96%);
+    background: $bigcolor;
     opacity: 0.97;
     box-shadow: 0.1em 0 0.2em 0 $grey4;
     border-top-left-radius: 0

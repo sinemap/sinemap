@@ -1,11 +1,11 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "url": "https://karateke.github.io",
-  "name": "Karateke",
+  "url": "{{ site.url }}",
+  "name": "{{ site.title }}",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://karateke.github.io/ara/?q={search_term_string}",
+    "target": "{{ site.url }}/ara/?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 }

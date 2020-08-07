@@ -12,8 +12,8 @@ layout: null
   <link href="{{ '/' | absolute_url }}" rel="alternate" type="text/html" {% if site.lang %} hreflang="{{ site.lang }}" {% endif %}/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ '/feed.xml' | absolute_url | xml_escape }}</id>
-  <icon>https://karateke.github.io/favicon.ico</icon>
-  <logo>https://karateke.github.io/icons/avatar.png</logo>
+  <icon>{{ site.url }}/favicon.ico</icon>
+  <logo>{{ site.url }}/icons/avatar.png</logo>
 
   {%- if site.title -%}
     <title type="html">{{ site.title | smartify | xml_escape }}</title>
@@ -52,15 +52,15 @@ layout: null
         {%- assign post_image = post.image -%}
         {%- if post_image -%}
           {%- assign post_image = post_image | relative_url | xml_escape -%}
-          {%- capture post_image_html -%}<img src="https://karateke.github.io{{ post_image }}" alt="">{%- endcapture -%}
+          {%- capture post_image_html -%}<img src="{{ site.url }}{{ post_image }}" alt="">{%- endcapture -%}
         {%- else -%}
-          {%- capture post_image_html -%}<img src="https://karateke.github.io/assets/img/featured/placeholder.jpeg" alt="">{%- endcapture -%}
+          {%- capture post_image_html -%}<img src="{{ site.url }}/assets/img/featured/placeholder.jpg" alt="">{%- endcapture -%}
         {%- endif -%}
         {{ post_image_html | markdownify | xml_escape }}
 
-        {{ post.content | strip | xml_escape | replace: "/assets/img/others/", "https://karateke.github.io/assets/img/others/" | replace: "/assets/img/huge/", "https://karateke.github.io/assets/img/huge/" | replace: "padding-bottom:", "bottom:" | replace: "data-src=", "src=" | replace: "&lt;noscript&gt;", "&lt;noscript style=&quot;display:none&quot;&gt;" }}
+        {{ post.content | strip | xml_escape | replace: "/assets/img/others/", "https://sinemap.netlify.app/assets/img/others/" | replace: "/assets/img/huge/", "https://sinemap.netlify.app/assets/img/huge/" | replace: "padding-bottom:", "bottom:" | replace: "data-src=", "src=" | replace: "&lt;noscript&gt;", "&lt;noscript style=&quot;display:none&quot;&gt;" }}
 
-        {%- capture post_footer -%}<a href="{{ post.url | absolute_url }}" rel="nofollow">{{ post.title }}</a> ilk olarak {{ site.title }}'de yayınlandı.{%- endcapture -%}
+        {%- capture post_footer -%}<a href="{{ post.url | absolute_url }}" rel="nofollow">{{ post.title }}</a> ilk olarak {{ site.title }}'te yayınlandı.{%- endcapture -%}
         {{ post_footer | markdownify | xml_escape }}
       </content>
 
@@ -93,9 +93,9 @@ layout: null
       {%- endif -%}
 
       {%- if post.image -%}
-        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://karateke.github.io/{{ post.image }}" />
+        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ site.url }}/{{ post.image }}" />
       {%- else -%}
-        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://karateke.github.io/assets/img/featured/placeholder-960.jpeg" />
+        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ site.url }}/assets/img/featured/placeholder-960.jpg" />
       {%- endif -%}
 
     </entry>

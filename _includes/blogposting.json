@@ -2,27 +2,23 @@
     "url":"{{ page.url | absolute_url }}",
     "image": {
         "@type": "ImageObject",
-        {%- if page.collection == 'posts' -%}
-        "url": "https://karateke.github.io/{{ page.image }}",
+        {%- if page.collection == 'posts' or page.collection == 'blog' -%}
+        "url": "{{ site.url }}/{{ page.image }}",
         "width":"1600",
         "height":"900"
-        {%- elsif page.layout == 'note' and page.image -%}
-        "url": "https://karateke.github.io/{{ page.image }}",
-        "width":"1280",
-        "height":"720"
         {%- else -%}
-        "url": "{{ site.url }}/assets/img/featured/placeholder-1280.jpeg",
+        "url": "{{ site.url }}/assets/img/featured/placeholder-1280.jpg",
         "width":"1280",
         "height":"720"
         {%- endif -%}
     },
     "publisher": {
         "@type": "Organization",
-        "name": "Karateke",
-        "sameAs": "https://karateke.github.io",
+        "name": "{{ site.title }}",
+        "sameAs": "{{ site.url }}",
         "logo":{
           "@type":"ImageObject",
-          "url":"https://karateke.github.io/icons/avatar.png",
+          "url":"{{ site.url }}/icons/avatar.png",
           "width":"192",
           "height":"192"
         }

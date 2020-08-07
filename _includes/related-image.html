@@ -1,4 +1,4 @@
-{%- if post.image and post.collection != 'kitaplar' and post.collection != 'filmler' -%}
+{%- if post.image and post.collection == 'blog' -%}
 {%- assign related_image = post.image -%}
 {%- assign r = related_image | split: '.' -%}
 <div class="ratio-container related-img">
@@ -21,7 +21,7 @@
          data-srcset="/{{ k[0] }}-320.{{ k[1] }} 320w,
                       /{{ k[0] }}.{{ k[1] }} 640w"/>
     <noscript>
-        <img alt="{{ post.title }}" src="https://karateke.github.io/{{ k[0] }}.{{ k[1] }}">
+        <img alt="{{ post.title }}" src="/{{ k[0] }}.{{ k[1] }}">
     </noscript>
 </div>
 {%- elsif post.content contains "<img" -%}
@@ -34,9 +34,9 @@
 </div>
 {%- else -%}
 <div class="ratio-container related-img">
-<img alt="{{ post.title }}" class="lazyload" data-src="/assets/img/featured/placeholder-320.jpeg">
+<img alt="{{ post.title }}" class="lazyload" data-src="/assets/img/featured/placeholder-320.jpg">
 <noscript>
-<img alt="{{ post.title }}" src="/assets/img/featured/placeholder-320.jpeg">
+<img alt="{{ post.title }}" src="/assets/img/featured/placeholder-320.jpg">
 </noscript>
 </div>
 {%- endif -%}

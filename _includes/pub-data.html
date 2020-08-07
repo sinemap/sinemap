@@ -1,27 +1,15 @@
 <div class="pub-data">
     <div class="pub-data-item pub-year">
-        {%- if page.collection == 'filmler' -%}
         <span class="pub-data-info">Yönetmen: </span>
-        {%- else -%}
-        <span class="pub-data-info">Yazar: </span>
-        {%- endif -%}
         <span>{{ page.artist }}</span>
     </div>
     <div class="pub-data-item pub-year"><span class="pub-data-info">Yıl: </span><span>{{ page.year }}</span></div>
     <div class="pub-data-item pub-genre"><span class="pub-data-info">Tür: </span><span>{{ page.genre }}</span></div>
     <div class="pub-data-item pub-info">
-        {%- if page.collection == 'kitaplar' -%}
-        <span class="pub-data-info">Yayıncı: </span><span>{{ page.info }}</span>
-        {%- else -%}
         <span class="pub-data-info">IMDB: </span><span>{{ page.imdb }}</span>
-        {%- endif -%}
     </div>
     <div class="pub-data-item pub-duration">
-        {%- if page.collection == 'kitaplar' -%}
-        <span class="pub-data-info">Sayfa: </span><span>{{ page.sayfa }}</span>
-        {%- else -%}
         <span class="pub-data-info">Süre: </span><span>{{ page.duration }} dakika</span>
-        {%- endif -%}
     </div>
     <div class="pub-data-item pub-stars"><span class="pub-data-info">Puan: </span><span class="star-icon">{{ page.stars }}</span></div>
 </div>

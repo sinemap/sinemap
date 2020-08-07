@@ -1,7 +1,7 @@
 {
-    "name": "Karateke Blog",
-    "description": "Erkeklik, teknoloji, sanat, toplum ve psikoloji üzerine can sıkıcı bir kişisel blog.",
-    "short_name": "Karateke",
+    "name": "{{ site.title }}",
+    "description": "{{ site.description }}",
+    "short_name": "{{ site.title }}",
     "icons": [{
       "src": "/icons/icon-192.png",
       "sizes": "192x192",
@@ -15,5 +15,5 @@
     "start_url": "/",
     "display": "standalone",
     "orientation": "natural",
-    "background_color": "#FFFEFD"
+    "background_color": "#f0f2f4"
   }

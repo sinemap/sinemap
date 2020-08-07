@@ -1,0 +1,18 @@
+{% assign post = site.blog.last %}
+<section class="home-blog-section">
+<h3 class="section-header">Blogta En Son</h3> 
+<div class="section-inner">
+<article class="blog-home">
+    <div class="blog-img">
+    {%- include archive-image.html -%}
+    </div>
+    <div class="blog-home-post">
+        <div class="blog-text">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2> 
+            <p class="summary">{%- if post.description -%}{{ post.description | smartify }}{%- else -%}{{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}{%- endif -%}</p>
+        </div>
+        {%- include archive-info.html -%} 
+    </div>
+</article>
+</div>
+</section>

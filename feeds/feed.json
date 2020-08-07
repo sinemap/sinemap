@@ -12,7 +12,6 @@ layout: null
     "author": "Ufuk Kızılgedik",
     "link": "{{ site.baseurl }}{{ post.url }}",
     "date": "{{ post.date | date: "%d.%m.%Y" }}",
-    "category": {%- if post.category -%}"{{ post.category | capitalize }}"{%- endif -%}{%- if post.collection == 'notlar' -%}"Notlar"{%- endif -%}{%- if post.collection == 'kitaplar' -%}"Kitap"{%- endif -%}{%- if post.collection == 'filmler' -%}"Film"{%- endif -%},
     "excerpt": {%- if post.description -%}{{ post.description | markdownify | strip_html | jsonify }}{%- else -%}{{ post.excerpt | markdownify | strip_html | truncate: 160 | jsonify}}{%- endif -%},
     "search_omit": "{{ post.search_omit }}"
 }

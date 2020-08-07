@@ -1,5 +1,5 @@
 <!-- ld-json blogposting --> 
-{%- if page.collection == 'posts' or page.collection == 'notlar' or page.collection == 'kitaplar' or page.collection == 'filmler' -%}
+{%- if page.collection == 'blog' or page.collection == 'posts' -%}
 <script type="application/ld+json">{%- include blogposting.json -%}</script>
 {%- endif -%}
 <!-- ld-json searchlink --> 
@@ -11,31 +11,21 @@
 <script type="application/ld+json">{%- include website.json -%}</script>
 {%- endif -%}
 <!-- ld-json breadcrumbs --> 
-{%- if page.layout == 'post' -%}
-<script type="application/ld+json">{%- include breadcrumbs.json -%}</script>
-{%- endif -%}
-{%- if page.collection == 'filmler' -%}
+{%- if page.collection == 'posts' -%}
 <script type="application/ld+json">{%- include bread-film.json -%}</script>
 {%- endif -%}
-{%- if page.collection == 'kitaplar' -%}
-<script type="application/ld+json">{%- include bread-book.json -%}</script>
-{%- endif -%}
-{%- if page.collection == 'notlar' -%}
-<script type="application/ld+json">{%- include bread-note.json -%}</script>
+{%- if page.collection == 'blog' -%}
+<script type="application/ld+json">{%- include bread-blog.json -%}</script>
 {%- endif -%}
 <!-- ld-json archive itemlist --> 
-{%- if page.layout == 'home' or page.layout == 'notes' or page.layout == 'tags' or page.layout == 'kategori' or page.layout == 'kitap-archive' %}
+{%- if page.layout == 'home' or page.layout == 'notes' %}
 <script type="application/ld+json">{%- include archive-itemlist.json -%}</script>
 {%- endif -%}
 <!-- ld-json lists and such --> 
-{%- if page.layout == 'post' and page.script -%}
+{%- if page.script -%}
 <script type="application/ld+json">{%- include {{ page.script }} -%}</script>
 {%- endif -%}
 <!-- ld-json reviews --> 
-{%- if page.collection == 'kitaplar' or page.collection == 'filmler' -%} 
-    {%- if page.snippet -%}
+{%- if page.collection == 'posts' -%} 
 <script type="application/ld+json">{%- include critic-review.json -%}</script>
-    {%- else -%}
-<script type="application/ld+json">{%- include pub-reviews.json -%}</script>
-    {%- endif -%}
 {%- endif -%}

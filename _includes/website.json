@@ -6,7 +6,7 @@
         "sameAs": "{{ site.url }}",
         "logo":{
           "@type":"ImageObject",
-          "url":"https://karateke.github.io/icons/avatar.png",
+          "url":"{{ site.url }}/icons/avatar.png",
           "width":"192",
           "height":"192"
         }
