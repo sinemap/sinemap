@@ -35,7 +35,7 @@ paths.jsPattern       = '/**/*.js';
 paths.imagePattern    = '/**/*.+(jpg|JPG|jpeg|JPEG|png|PNG|svg|SVG|gif|GIF|webp|WEBP|tif|TIF)';
 paths.markdownPattern = '/**/*.+(md|MD|markdown|MARKDOWN)';
 paths.htmlPattern     = '/**/*.html';
-paths.xmlPattern      = '/**/*.xml';
+paths.xmlPattern      = "/**/*.{xml,json}";
 
 // Asset files globs
 paths.sassFilesGlob  = paths.sassFiles  + paths.sassPattern;

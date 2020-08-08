@@ -18,6 +18,7 @@
   "homepage": "https://github.com/sinemap/sinemap#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-pretty-data": "^0.1.2",
     "gulp-responsive": "^3.0.1"
   },
   "dependencies": {
@@ -28,6 +29,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-debug": "^4.0.0",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-notify": "^3.2.0",
     "gulp-postcss": "^8.0.0",

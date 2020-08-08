@@ -11,6 +11,8 @@ var gutil        = require('gulp-util');
 var imagemin     = require('gulp-imagemin');
 var notify       = require('gulp-notify');
 var postcss      = require('gulp-postcss');
+var htmlmin      = require("gulp-htmlmin");
+var prettyData   = require("gulp-pretty-data");
 var rename       = require('gulp-rename');
 var responsive   = require('gulp-responsive');
 var run          = require('gulp-run');
@@ -22,6 +24,45 @@ var uglify       = require('gulp-uglify');
 // Include paths file.
 var paths = require('./_assets/gulp_config/paths');
 
+// HTML
+
+gulp.task("build:html", function(done) {
+  return gulp
+    .src(paths.siteDir + paths.htmlPattern)
+    .pipe(
+      htmlmin({
+        removeComments: true,
+        collapseWhitespace: true,
+        collapseBooleanAttributes: false,
+        removeAttributeQuotes: false,
+        removeRedundantAttributes: false,
+        minifyJS: true,
+        minifyCSS: true
+      })
+    )
+    .pipe(size({ title: "optimized HTML" }))
+    .pipe(gulp.dest(paths.siteDir));
+    done();
+});
+
+// XML
+
+gulp.task("build:xml", function(done) {
+  return gulp
+    .src(paths.siteDir + paths.xmlPattern)
+    .pipe(
+      prettyData({
+        type: "minify",
+        preserveComments: true
+      })
+    )
+    .pipe(size({ title: "optimized XML" }))
+    .pipe(gulp.dest(paths.siteDir));
+    done();
+});
+
+// Styles
+
 // Uses Sass compiler to process styles, adds vendor prefixes, minifies, then
 // outputs file to the appropriate location.
 
@@ -31,7 +72,7 @@ gulp.task('build:styles:main', function(done) {
     .pipe(sass({ precision: 5, outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([ autoprefixer() ]))
         .pipe(cleancss({level: 2}))
-        .pipe(size())
+        .pipe(size({ title: "CSS" }))
         .pipe(gulp.dest(paths.jekyllCssFiles))
         .pipe(gulp.dest(paths.siteCssFiles))
         .on('error', gutil.log);
@@ -42,7 +83,7 @@ gulp.task('build:styles:critical', function(done) {
     return gulp.src([paths.sassFiles + '/critical.scss'])
     .pipe(sass({ precision: 5, outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(cleancss({level: 2}))
-        .pipe(size())
+        .pipe(size({ title: "Critical CSS" }))
         .pipe(gulp.dest('_includes'))
         .on('error', gutil.log);
     done();
@@ -67,7 +108,7 @@ gulp.task('build:scripts', function(done) {
     ])
         .pipe(concat('main.js'))
         .pipe(uglify())
-        .pipe(size())
+        .pipe(size({ title: "Scripts" }))
         .pipe(gulp.dest(paths.jekyllJsFiles))
         .pipe(gulp.dest(paths.siteJsFiles))
         .on('error', gutil.log);
@@ -271,7 +312,7 @@ gulp.task('clean', gulp.series('clean:jekyll',
 
 // Builds site anew.
 
-gulp.task('build', gulp.series('clean', gulp.parallel('build:scripts', 'build:styles'), 'build:images', 'build:jekyll'));
+gulp.task('build', gulp.series('clean', gulp.parallel('build:scripts', 'build:styles'), 'build:images', 'build:jekyll', 'build:html', 'build:xml'));
 
 // Builds site anew using test config.
 gulp.task('build:test', gulp.series('clean', gulp.parallel('build:scripts', 'build:styles'), 'build:images', 'build:jekyll:test'));
