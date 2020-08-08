@@ -228,6 +228,7 @@ body {
       font-size: $fs3;
       margin: 3rem 0 1rem;
       text-transform: uppercase;
+      color: $grey5;
   }
   
   /************ Page info *************/
@@ -318,18 +319,6 @@ body {
   
   .archive-wrap {
     margin: 0 5vw;
-    .cat-found {
-        padding: 2rem 0 0.3rem;
-        margin-bottom: 0;
-        font-size: $fs4;
-        font-weight: 400;
-        border-bottom: 1px solid $grey7;
-        span {
-            text-transform: uppercase;
-            color: $link;
-            font-weight: 700;
-        }
-    }
 
     // Post Listing
     
