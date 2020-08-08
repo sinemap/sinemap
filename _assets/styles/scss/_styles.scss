@@ -1201,7 +1201,8 @@ header.site-header {
     width: 100%;
 }
 
-#mce-EMAIL::placeholder {
+#mce-EMAIL::placeholder, 
+#mce-FNAME::placeholder {
     color: $grey5;
 }
 
