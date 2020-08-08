@@ -23,7 +23,7 @@ p {
 
 /************ Sans *************/
 
-input, footer, nav, span a, a.link-box, time, .page-time, .tag-cloud, h2, h3:not(.section-header), h4, h5, h6, .post-title, figcaption, .sans, table, dt, .pub-data, .page-nav-title-link {
+input, footer, nav, span a, a.link-box, time, .page-time, .tag-cloud, h2, h3:not(.section-header), h4, h5, h6, .post-title, figcaption, .sans, table, dt, .pub-data, .page-nav-title-link, .subs-bar {
     font-family: $sans;
     font-variant-numeric: lining-nums;
 }
@@ -1164,6 +1164,7 @@ header.site-header {
     overflow: hidden;
     text-align: center;
     background-color: $black;
+    background: linear-gradient(135deg, rgba(35,42,49,1) 25%, rgb(35, 46, 58) 90%);
 }
 
 .subs-header {
@@ -1173,7 +1174,7 @@ header.site-header {
     color: $grey1;
     margin: 0;
     padding: 1.2rem 5vw 1rem;
-    border-bottom: 1px solid $grey3;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .subs-text {
@@ -1201,10 +1202,15 @@ header.site-header {
     width: 100%;
 }
 
-#mce-EMAIL::placeholder, 
-#mce-FNAME::placeholder {
-    color: $grey5;
+label {
+    display:block;
+    color: $grey2;
+    font-size: $fs5;
+    text-align: left;
+    padding-bottom: 0.4rem;
+    font-weight: 700;
 }
+
 
 #mce-EMAIL:active,
 #mce-EMAIL:focus, 
