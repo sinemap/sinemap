@@ -968,6 +968,48 @@ header.site-header {
         grid-auto-flow: dense;
         gap: 3rem 1.5rem;
         padding: 3rem 0;
+        .referral {
+            grid-column: 1/-1;
+            background: linear-gradient(124deg, rgba(219,216,215,1) 25%, rgba(244,241,240,1) 75%);
+            grid-row: 3;
+            display: grid;
+            gap: 1rem 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            max-width: 90vw;
+            overflow: hidden;
+            .refer-text {
+                grid-column: 1/-2;
+                display: grid;
+                place-content: center;
+                padding: 1rem;
+                p {
+                    margin: 0;
+                    color: rgba(0, 0, 0, 0.6);
+                    line-height: 1.2;
+                    text-align: center;
+                    a {
+                        color: #dd3435;
+                        &:hover {
+                            color: $link;
+                        }
+                    }
+                }
+            }
+            .refer-img {
+                border: 4px solid #dd3435;
+                box-shadow: 0 5px 30px 5px rgba(110, 89, 89, 0.3);
+                transition: 0.25s border-color;
+            }
+            @media (hover) { 
+                .refer-img-link:hover {
+                    .refer-img {
+                        border-color: $link;
+                    }
+                }
+            }
+        }
         .post-archive {
             .archive-image {
                 img {
