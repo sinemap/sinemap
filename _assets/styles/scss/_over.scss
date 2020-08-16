@@ -332,10 +332,10 @@ body {
         padding: 3rem 0;
         .referral {
             grid-column: 1/-1;
-            background: linear-gradient(129deg, rgba(44,39,38,1) 25%, rgba(26,21,20,1) 75%);
+            background: linear-gradient(135deg, rgba(35,42,49,1) 25%, rgb(35, 46, 58) 90%);
             grid-row: 3;
             display: grid;
-            gap: 0.5rem 1.5rem;
+            gap: 1rem 1.5rem;
             grid-template-columns: 1fr 9em;
             padding: 1rem;
             border: 1px solid $grey1;
@@ -348,17 +348,17 @@ body {
                 padding: 1rem;
                 p {
                     margin: 0;
-                    color: rgba(255, 255, 255, 0.6);
+                    color: $grey2;
                     font-weight: 700;
-                    line-height: 1.2;
+                    line-height: 1.3;
                     text-align: center;
                     a {
-                        color: $accent;
+                        color: #dd3435;
                     }
                 }
             }
             .refer-img {
-                border: 1px solid $accent;
+                border: 1px solid #dd3435;
             }
         }
         .post-archive {
