@@ -23,7 +23,7 @@ p {
 
 /************ Sans *************/
 
-input, footer, nav, span a, a.link-box, time, .page-time, .tag-cloud, h2, h3:not(.section-header), h4, h5, h6, .post-title, figcaption, .sans, table, dt, .pub-data, .page-nav-title-link, .subs-bar {
+input, footer, nav, span a, a.link-box, time, .page-time, .tag-cloud, h2, h3:not(.section-header), h4, h5, h6, .post-title, figcaption, .sans, table, dt, .pub-data, .page-nav-title-link, .subs-bar, .refer-text {
     font-family: $sans;
     font-variant-numeric: lining-nums;
 }
@@ -970,27 +970,33 @@ header.site-header {
         padding: 3rem 0;
         .referral {
             grid-column: 1/-1;
-            background: linear-gradient(124deg, rgba(219,216,215,1) 25%, rgba(244,241,240,1) 75%);
+            background: linear-gradient(129deg, rgba(44,39,38,1) 25%, rgba(26,21,20,1) 75%);
             grid-row: 3;
             display: grid;
-            gap: 1rem 1.5rem;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 0.5rem 1.5rem;
+            grid-template-columns: 1fr 9em;
             padding: 1rem;
+            border: 1px solid $grey1;
             margin-bottom: 0.5rem;
             max-width: 90vw;
             overflow: hidden;
+            @media only screen and (max-width: 480px) {
+                grid-template-columns: 1fr;
+                .refer-img-link {
+                    margin: 0 3rem 1rem;
+                }
+            }
             .refer-text {
-                grid-column: 1/-2;
                 display: grid;
                 place-content: center;
                 padding: 1rem;
                 p {
                     margin: 0;
-                    color: rgba(0, 0, 0, 0.6);
-                    line-height: 1.2;
+                    color: rgba(255, 255, 255, 0.6);
+                    font-weight: 700;
                     text-align: center;
                     a {
-                        color: #dd3435;
+                        color: $accent;
                         &:hover {
                             color: $link;
                         }
@@ -998,16 +1004,7 @@ header.site-header {
                 }
             }
             .refer-img {
-                border: 4px solid #dd3435;
-                box-shadow: 0 5px 30px 5px rgba(110, 89, 89, 0.3);
-                transition: 0.25s border-color;
-            }
-            @media (hover) { 
-                .refer-img-link:hover {
-                    .refer-img {
-                        border-color: $link;
-                    }
-                }
+                border: 1px solid $accent;
             }
         }
         .post-archive {
