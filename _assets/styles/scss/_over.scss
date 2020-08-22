@@ -226,7 +226,7 @@ body {
   
   .page-title {
       font-size: $fs3;
-      margin: 2rem 0 1rem;
+      margin: 3rem 0 1rem;
       text-transform: uppercase;
       color: $grey7;
   }
@@ -383,10 +383,11 @@ body {
             grid-template-columns: 2fr 1fr;
             gap: 0 1.5rem;
             align-items: center;
-            padding-bottom: 1.5rem;
-            border-bottom: 4px double $grey5;
             .archive-image .ratio-container {
                 height: 20em;
+            }
+            .title-text h2 {
+                font-size: $fs3;
             }
         }
         .post-archive:nth-of-type(5){
@@ -425,7 +426,7 @@ body {
       padding-bottom: 0.1em;
       font-size: $fsp;
       text-transform: uppercase;
-      border-bottom: 4px double $grey5;
+      border-bottom: 1px solid $grey5;
       letter-spacing: 0.05em;
       font-weight: 700;
   }
@@ -481,7 +482,7 @@ body {
           }
           .note-archive:first-of-type {
               flex-flow: column nowrap;
-              border-bottom: 4px double $grey5;
+              border-bottom: 1px solid $grey5;
               .note-archive-image {
                   margin-left: 0;
                   order: 1;
